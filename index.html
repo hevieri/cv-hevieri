@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erika Helfenstern | Portfolio Profesional</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="animated-bg">
+      <div class="v-blob v-blob-1"></div>
+      <div class="v-blob v-blob-2"></div>
+      <div class="v-blob v-blob-3"></div>
+    </div>
+
+    <main class="main-wrapper">
+      <section class="hero glass-panel">
+        <div class="hero__info">
+          <span class="badge">Developer & QA Tester Junior</span>
+          <h1 class="hero__name">
+            Erika <span class="violet-glow">Helfenstern</span>
+          </h1>
+          <p class="hero__subtitle">
+            ¡Hola Mundo! Soy Hevieri, me especializo en Desarrollo Web y Testing
+            QA. Me capacito constantemente de forma autodidacta para dominar
+            nuevas herramientas. <br />
+          </p>
+
+          <div class="hero__socials">
+            <a href="#" target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="#" target="_blank"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href="#" target="_blank"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+          </div>
+
+          <a href="#" class="btn-cv" download>
+            Descargar CV <i class="fa-solid fa-file-arrow-down"></i>
+          </a>
+        </div>
+
+        <div class="hero__side floating-anim">
+          <p class="side-label">Proyectos Destacados</p>
+          <div id="mini-projects-list"></div>
+        </div>
+      </section>
+
+      <!-- SOBRE MI -->
+      <section class="accordion glass-panel">
+        <button
+          class="accordion-header"
+          onclick="toggleAccordion('about-body', 'about-arrow')"
+        >
+          <h2 class="accordion-title">
+            <i class="fa-solid fa-chevron-right arrow" id="about-arrow"></i>
+            SOBRE MI
+          </h2>
+        </button>
+        <div class="accordion-body" id="about-body">
+          <div class="accordion-inner">
+            <section class="about-section glass-panel">
+              <p>
+                Soy Erika Helfenstern, QA Tester y desarrolladora front‑end
+                junior. Me apasiona la tecnología y disfruto conectar la
+                estética del diseño con la precisión del testing para lograr
+                interfaces funcionales y atractivas. Mi recorrido combina
+                formación académica, proyectos colaborativos y práctica
+                autodidacta, siempre con la motivación de crecer en el mundo IT
+                y aportar valor en cada equipo del que formo parte.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section class="stack-section glass-panel">
+        <div class="stack-grid">
+          <div class="stack-col">
+            <h3 class="stack-header">Quality Assurance</h3>
+            <div class="stack-list" id="qa-render"></div>
+          </div>
+          <div class="stack-col">
+            <h3 class="stack-header">Front-End Dev</h3>
+            <div class="stack-list" id="front-render"></div>
+          </div>
+          <div class="stack-col">
+            <h3 class="stack-header">Back-End & Tools</h3>
+            <div class="stack-list" id="back-render"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCIA -->
+      <section class="accordion glass-panel">
+        <button
+          class="accordion-header"
+          onclick="toggleAccordion('exp-body', 'exp-arrow')"
+        >
+          <h2 class="accordion-title">
+            <i class="fa-solid fa-chevron-right arrow" id="exp-arrow"></i>
+            EXPERIENCIA
+          </h2>
+        </button>
+        <div class="accordion-body" id="exp-body">
+          <div class="accordion-inner">
+            <div class="experience-grid">
+              <div class="experience-card">
+                <h4>
+                  <i class="fa-solid fa-laptop-code"></i> Proyecto WordPress
+                </h4>
+                <div class="tech-tags">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">SEO</span>
+                  <span class="tag">Google Ads</span>
+                  <span class="tag">HTML / CSS</span>
+                </div>
+                <p>
+                  Creación y gestión de sitios en WordPress, incluyendo el
+                  mantenimiento de un portal de noticias con publicaciones
+                  diarias, optimizado mediante estrategias de SEO y monetización
+                  con publicidad de Google. Posteriormente avancé hacia el
+                  desarrollo con código, trabajando con HTML, CSS, JavaScript y
+                  Bootstrap.
+                </p>
+              </div>
+
+              <div class="experience-card">
+                <h4><i class="fa-solid fa-users"></i> Adopta un Junior</h4>
+                <div class="tech-tags">
+                  <span class="tag">QA Testing</span>
+                  <span class="tag">Pruebas Funcionales</span>
+                  <span class="tag">Team Collaboration</span>
+                </div>
+                <p>
+                  Ejercí el rol de QA Tester dentro de equipos organizados por
+                  áreas, participando en reuniones de coordinación y ciclos de
+                  feedback. Colaboré con desarrolladores y diseñadores para
+                  asegurar la calidad del software en proyectos que simulaban un
+                  entorno laboral real.
+                </p>
+              </div>
+
+              <div class="experience-card">
+                <h4><i class="fa-solid fa-bug"></i> uTest</h4>
+                <div class="tech-tags">
+                  <span class="tag">Web Testing</span>
+                  <span class="tag">Mobile Testing</span>
+                  <span class="tag">Bug Reports</span>
+                </div>
+                <p>
+                  Mi paso por uTest me permitió enfrentar escenarios auténticos
+                  de testing Web y Mobile, adquiriendo disciplina, precisión y
+                  capacidad de adaptación en distintos proyectos y contextos.
+                </p>
+              </div>
+
+              <div class="experience-card">
+                <h4>
+                  <i class="fa-solid fa-lightbulb"></i> Proyectos Autodidactas
+                </h4>
+                <div class="tech-tags">
+                  <span class="tag">Frontend</span>
+                  <span class="tag">Backend</span>
+                  <span class="tag">Base de datos</span>
+                  <span class="tag">Testing</span>
+                  <span class="tag">Frameworks</span>
+                  <span class="tag">Librerias</span>
+                  <span class="tag">APIs</span>
+                </div>
+                <p>
+                  Suelo llevar adelante proyectos autodidactas para seguir
+                  aprendiendo, experimentar nuevas herramientas y perfeccionar
+                  mis habilidades en QA y front‑end.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMACIÓN -->
+      <section class="accordion glass-panel">
+        <button
+          class="accordion-header"
+          onclick="toggleAccordion('edu-body', 'edu-arrow')"
+        >
+          <h2 class="accordion-title">
+            <i class="fa-solid fa-chevron-right arrow" id="edu-arrow"></i>
+            FORMACIÓN Y CERTIFICACIONES
+          </h2>
+        </button>
+        <div class="accordion-body" id="edu-body">
+          <div class="accordion-inner">
+            <div class="edu-item">
+              <span class="edu-tag">Tecnicatura</span>
+              <h4>Diseño Gráfico Digital</h4>
+              <p>
+                Formación integral que combinó UX/UI, marketing digital y
+                herramientas prácticas como Figma, HTML, CSS, jQuery, Bootstrap,
+                JavaScript, PHP y SQL, aportando una base sólida para el diseño
+                y desarrollo de interfaces modernas.
+              </p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Carrera</span>
+              <h4>Carrera QA Automation Testing</h4>
+              <p>
+                Cursos avanzados en metodologías de testing y herramientas de
+                automatización.
+              </p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Bootcamp</span>
+              <h4>Testing QA</h4>
+              <p>
+                Formación intensiva en testing manual, enfocada en la detección
+                de errores, documentación de casos de prueba y aseguramiento de
+                calidad en entornos reales.
+              </p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Curso</span>
+              <h4>Desarrollo Front-End</h4>
+              <p>
+                Formación práctica en HTML, CSS, JavaScript y Bootstrap,
+                enfocada en la construcción de interfaces modernas y
+                responsivas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <span class="dot">•</span>Este sitio web fue creado por Erika
+        Helfenstern <span class="dot">•</span> Tester & Developer 2026<span
+          class="dot"
+          >•</span
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
