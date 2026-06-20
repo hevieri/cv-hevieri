@@ -31,9 +31,8 @@
             Erika <span class="violet-glow">Helfenstern</span>
           </h1>
           <p class="hero__subtitle">
-            ¡Hola Mundo! Soy Hevieri, me especializo en Desarrollo Web y Testing
-            QA. Me capacito constantemente de forma autodidacta para dominar
-            nuevas herramientas. <br />
+            Hevieri · Desarrollo Web y Testing QA. Curiosa por naturaleza,
+            siempre metiéndome en algo nuevo.
           </p>
 
           <div class="hero__socials">
@@ -51,9 +50,19 @@
             </a>
           </div>
 
-          <a href="#" class="btn-cv" download>
-            Descargar CV <i class="fa-solid fa-file-arrow-down"></i>
-          </a>
+          <div class="cv-dropdown">
+            <button class="btn-cv" onclick="toggleCVDropdown(event)">
+              Descargar CV <i class="fa-solid fa-chevron-down" id="cv-arrow"></i>
+            </button>
+            <div class="cv-dropdown-menu" id="cv-dropdown-menu">
+              <a href="cv-qa.pdf" download>
+                <i class="fa-solid fa-flask"></i> CV Testing
+              </a>
+              <a href="cv-frontend.pdf" download>
+                <i class="fa-solid fa-laptop-code"></i> CV Frontend
+              </a>
+            </div>
+          </div>
         </div>
 
         <div class="hero__side floating-anim">
@@ -77,13 +86,10 @@
           <div class="accordion-inner">
             <section class="about-section glass-panel">
               <p>
-                Soy Erika Helfenstern, QA Tester y desarrolladora front‑end
-                junior. Me apasiona la tecnología y disfruto conectar la
-                estética del diseño con la precisión del testing para lograr
-                interfaces funcionales y atractivas. Mi recorrido combina
-                formación académica, proyectos colaborativos y práctica
-                autodidacta, siempre con la motivación de crecer en el mundo IT
-                y aportar valor en cada equipo del que formo parte.
+                QA Tester y desarrolladora front‑end. Tengo la base para
+                desenvolverme sola, y cuando algo se complica o hay que
+                ir más rápido, la IA me da una mano. Siempre estoy
+                curioseando tecnologías nuevas.
               </p>
             </section>
           </div>
@@ -92,16 +98,21 @@
 
       <!-- STACK -->
       <section class="stack-section glass-panel">
+        <div class="agile-wrapper">
+          <h3 class="stack-header">Metodologías Ágiles</h3>
+          <div class="agile-list" id="agile-render"></div>
+        </div>
+
         <div class="stack-grid">
-          <div class="stack-col">
+          <div class="stack-col" data-category="qa">
             <h3 class="stack-header">Quality Assurance</h3>
             <div class="stack-list" id="qa-render"></div>
           </div>
-          <div class="stack-col">
+          <div class="stack-col" data-category="front">
             <h3 class="stack-header">Front-End Dev</h3>
             <div class="stack-list" id="front-render"></div>
           </div>
-          <div class="stack-col">
+          <div class="stack-col" data-category="back">
             <h3 class="stack-header">Back-End & Tools</h3>
             <div class="stack-list" id="back-render"></div>
           </div>
@@ -124,7 +135,7 @@
             <div class="experience-grid">
               <div class="experience-card">
                 <h4>
-                  <i class="fa-solid fa-laptop-code"></i> Proyecto WordPress
+                  <i class="fa-solid fa-laptop-code"></i> ElRincónDelFriki.net
                 </h4>
                 <div class="tech-tags">
                   <span class="tag">WordPress</span>
@@ -133,12 +144,9 @@
                   <span class="tag">HTML / CSS</span>
                 </div>
                 <p>
-                  Creación y gestión de sitios en WordPress, incluyendo el
-                  mantenimiento de un portal de noticias con publicaciones
-                  diarias, optimizado mediante estrategias de SEO y monetización
-                  con publicidad de Google. Posteriormente avancé hacia el
-                  desarrollo con código, trabajando con HTML, CSS, JavaScript y
-                  Bootstrap.
+                  Sitio en WordPress donde subía contenido constantemente y
+                  administraba todo: SEO, monetización con publicidad de Google,
+                  imágenes, mantenimiento y actualizaciones diarias.
                 </p>
               </div>
 
@@ -209,41 +217,182 @@
         </button>
         <div class="accordion-body" id="edu-body">
           <div class="accordion-inner">
-            <div class="edu-item">
-              <span class="edu-tag">Tecnicatura</span>
-              <h4>Diseño Gráfico Digital</h4>
-              <p>
-                Formación integral que combinó UX/UI, marketing digital y
-                herramientas prácticas como Figma, HTML, CSS, jQuery, Bootstrap,
-                JavaScript, PHP y SQL, aportando una base sólida para el diseño
-                y desarrollo de interfaces modernas.
-              </p>
-            </div>
-            <div class="edu-item">
-              <span class="edu-tag">Carrera</span>
-              <h4>Carrera QA Automation Testing</h4>
-              <p>
-                Cursos avanzados en metodologías de testing y herramientas de
-                automatización.
-              </p>
-            </div>
-            <div class="edu-item">
-              <span class="edu-tag">Bootcamp</span>
-              <h4>Testing QA</h4>
-              <p>
-                Formación intensiva en testing manual, enfocada en la detección
-                de errores, documentación de casos de prueba y aseguramiento de
-                calidad en entornos reales.
-              </p>
-            </div>
-            <div class="edu-item">
-              <span class="edu-tag">Curso</span>
-              <h4>Desarrollo Front-End</h4>
-              <p>
-                Formación práctica en HTML, CSS, JavaScript y Bootstrap,
-                enfocada en la construcción de interfaces modernas y
-                responsivas.
-              </p>
+            <div class="formacion-columns">
+
+              <!-- Testing / QA -->
+              <div class="formacion-subsection">
+                <h3 class="formacion-subheader" data-category="qa">
+                  <i class="fa-solid fa-flask"></i> Testing / QA
+                </h3>
+
+                <div class="edu-item" data-category="qa">
+                  <span class="edu-tag">Carrera</span>
+                  <h4>Carrera QA Automation Testing</h4>
+                  <p>
+                    Cursos avanzados en metodologías de testing y herramientas
+                    de automatización.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="qa">
+                  <span class="edu-tag">Bootcamp</span>
+                  <h4>Testing QA</h4>
+                  <p>
+                    Formación intensiva en testing manual a través de Talento
+                    Tech, enfocada en la detección de errores, documentación
+                    de casos de prueba y aseguramiento de calidad en entornos
+                    reales.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="qa">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Automatización con Selenium</h4>
+                  <p>
+                    Automatización de pruebas funcionales en aplicaciones web
+                    con Selenium WebDriver, formando parte del programa Talento
+                    Tech.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="qa">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Pruebas de API con Postman</h4>
+                  <p>
+                    Testing de servicios REST con Postman, creación de
+                    colecciones, variables de entorno y aserciones dinámicas.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="qa">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Pruebas de Rendimiento</h4>
+                  <p>
+                    Identificación de cuellos de botella, estrés y carga en
+                    aplicaciones web con herramientas open-source.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="qa">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Gestión de Casos de Prueba</h4>
+                  <p>
+                    Diseño, documentación y trazabilidad de casos de prueba
+                    usando TestRail y buenas prácticas ISTQB.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="qa">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Metodologías Ágiles (Scrum)</h4>
+                  <p>
+                    Fundamentos de Scrum, roles, ceremonias y aplicación del
+                    marco ágil en equipos de desarrollo y testing.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Desarrollo -->
+              <div class="formacion-subsection">
+                <h3 class="formacion-subheader" data-category="front">
+                  <i class="fa-solid fa-laptop-code"></i> Desarrollo
+                </h3>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Tecnicatura</span>
+                  <h4>Diseño Gráfico Digital</h4>
+                  <p>
+                    Formación integral que combinó UX/UI, marketing digital y
+                    herramientas prácticas como Figma, HTML, CSS, jQuery,
+                    Bootstrap, JavaScript, PHP y SQL, aportando una base sólida
+                    para el diseño y desarrollo de interfaces modernas.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>React.js</h4>
+                  <p>
+                    Componentes funcionales, hooks, manejo de estado, routing y
+                    consumo de APIs en aplicaciones React.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>JavaScript Intermedio</h4>
+                  <p>
+                    Programación orientada a objetos, closures, promesas,
+                    asincronía y manipulación avanzada del DOM.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>JavaScript Básico</h4>
+                  <p>
+                    Fundamentos de JavaScript: variables, funciones, DOM,
+                    eventos y lógica de programación, cursado en Educación IT.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>PHP y SQL</h4>
+                  <p>
+                    Desarrollo back-end con PHP y bases de datos SQL:
+                    consultas, CRUD, conexión a bases de datos y creación de
+                    aplicaciones dinámicas.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>SQL</h4>
+                  <p>
+                    Consultas avanzadas, joins, subconsultas, índices y
+                    optimización de bases de datos relacionales.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Sass y CSS Moderno</h4>
+                  <p>
+                    Preprocesadores, Grid, Flexbox, animaciones CSS,
+                    arquitectura de estilos y diseño responsivo avanzado.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Diseño UX/UI con Figma</h4>
+                  <p>
+                    Prototipado, sistemas de diseño, componentes reutilizables y
+                    colaboración en equipo usando Figma.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Desarrollo Front-End</h4>
+                  <p>
+                    Formación práctica en HTML, CSS, JavaScript y Bootstrap,
+                    enfocada en la construcción de interfaces modernas y
+                    responsivas.
+                  </p>
+                </div>
+
+                <div class="edu-item" data-category="front">
+                  <span class="edu-tag">Curso</span>
+                  <h4>Git & GitHub Avanzado</h4>
+                  <p>
+                    Ramas, merge, resolución de conflictos, pull requests y
+                    flujos de trabajo colaborativos con Git.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>

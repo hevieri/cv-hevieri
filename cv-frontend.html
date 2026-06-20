@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Erika Helfenstern - Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.45;
+      color: #1e1e2e;
+      background: #fff;
+    }
+    @page { margin: 0; size: A4; }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 16mm 20mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 14px;
+    }
+    .badge {
+      display: inline-block;
+      background: #0284c7;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 5px 18px;
+      border-radius: 14px;
+      margin-bottom: 8px;
+    }
+    h1 { font-size: 38px; font-weight: 800; letter-spacing: -0.5px; }
+    h1 span { color: #0284c7; }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      margin: 8px 0 0;
+      font-size: 12px;
+      color: #555;
+    }
+    .contact a { color: #555; text-decoration: none; }
+    .contact i { color: #0284c7; width: 16px; }
+
+    .sidebar-contact { margin-bottom: 12px; }
+    .sidebar-contact a, .sidebar-contact span {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #555;
+      text-decoration: none;
+      padding: 2px 0;
+    }
+
+    .main-layout {
+      display: flex;
+      flex: 1;
+      gap: 0;
+      border-top: 2.5px solid #0284c7;
+      padding-top: 18px;
+    }
+
+    .sidebar {
+      width: 160px;
+      min-width: 160px;
+      display: flex;
+      flex-direction: column;
+      border-right: 2px solid #e5e5e5;
+      padding-right: 18px;
+    }
+    .sidebar .sec-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #0284c7;
+      margin-bottom: 10px;
+    }
+    .skill-group {
+      margin-bottom: 12px;
+    }
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+    .skill-group h6 {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #94a3b8;
+      margin-bottom: 4px;
+    }
+    .skill-group span {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+      padding: 3px 0;
+    }
+    .skill-group span::before {
+      content: "\25CF";
+      color: #0284c7;
+      margin-right: 10px;
+      font-size: 9px;
+    }
+
+    .content {
+      flex: 1;
+      padding-left: 22px;
+      display: flex;
+      flex-direction: column;
+    }
+    .content .sec-title {
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #0284c7;
+      margin-bottom: 8px;
+    }
+
+    .summary {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.55;
+      margin: 6px 0 8px;
+    }
+    .header-divider {
+      border-top: 1px solid #ddd;
+      margin: 0 0 8px;
+    }
+
+    .exp-item { margin-bottom: 14px; }
+    .exp-header { display: flex; align-items: baseline; gap: 8px; }
+    .exp-header h4 { font-size: 14px; font-weight: 700; }
+    .exp-header .exp-meta { font-size: 10px; color: #999; }
+    .exp-item p { font-size: 12px; color: #444; line-height: 1.5; }
+
+    .edu-item { 
+      margin-bottom: 6px;
+    }
+    .edu-tag {
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #f0f9ff;
+      color: #0284c7;
+      padding: 1px 8px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 1px;
+    }
+    .edu-item h5 { font-size: 13px; font-weight: 600; }
+    .edu-item p { font-size: 11px; color: #555; line-height: 1.4; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <span class="badge">Frontend Developer Junior</span>
+      <h1>Erika <span>Helfenstern</span></h1>
+      <div class="header-divider"></div>
+      <p class="summary">Desarrolladora front-end con formación en diseño gráfico digital. Experiencia en WordPress, React y maquetación web. Combino visión estética con código limpio. Uso IA para acelerar procesos y resolver desafíos técnicos.</p>
+    </div>
+
+    <div class="main-layout">
+      <div class="sidebar">
+        <div class="sidebar-contact">
+          <div class="sec-title">Contacto</div>
+          <span>CABA, Argentina</span>
+          <a href="https://wa.me/541162178105">+54 11 6217-8105</a>
+          <a href="mailto:hevieri.dev@gmail.com">hevieri.dev@gmail.com</a>
+          <a href="https://www.linkedin.com/in/hevieri/">/in/hevieri</a>
+          <a href="https://github.com/hevieri">github/hevieri</a>
+        </div>
+
+        <div class="sec-title">Skills</div>
+
+        <div class="skill-group">
+          <h6>Frontend</h6>
+          <span>HTML / CSS</span>
+          <span>React / JS</span>
+          <span>Tailwind</span>
+          <span>Bootstrap</span>
+          <span>jQuery</span>
+          <span>Sass</span>
+        </div>
+
+        <div class="skill-group">
+          <h6>Backend & DB</h6>
+          <span>Firebase</span>
+          <span>PHP / SQL</span>
+          <span>WordPress</span>
+        </div>
+
+        <div class="skill-group">
+          <h6>Herramientas</h6>
+          <span>Git / GitHub</span>
+          <span>Figma</span>
+        </div>
+
+        <div class="skill-group">
+          <div class="sec-title">Idioma</div>
+          <span>Español Nativo</span>
+          <span>Inglés Intermedio</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="exp-section">
+          <div class="sec-title">Experiencia</div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <h4>ElRincónDelFriki.net</h4>
+              <span class="exp-meta">WordPress · Gestión integral</span>
+            </div>
+            <p>Creación y administración completa de un portal de noticias en WordPress: SEO, monetización con Google Ads, manejo de imágenes, contenido diario y mantenimiento técnico.</p>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <h4>Proyectos Autodidactas</h4>
+              <span class="exp-meta">React · JS · APIs</span>
+            </div>
+            <p>Desarrollo de aplicaciones web explorando nuevas herramientas y tecnologías, combinando frontend, backend y testing.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:8px;">
+          <div class="sec-title">Formación</div>
+
+          <div class="edu-item">
+            <span class="edu-tag">Tecnicatura</span>
+            <h5>Diseño Gráfico Digital</h5>
+            <p>UX/UI, Figma, HTML, CSS, JS, Bootstrap, PHP, SQL.</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-tag">Curso</span>
+            <h5>Desarrollo Front-End</h5>
+            <p>HTML, CSS, JavaScript, Bootstrap + responsive.</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-tag">Curso</span>
+            <h5>React.js</h5>
+            <p>Hooks, estado, routing y consumo de APIs.</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-tag">Curso</span>
+            <h5>JavaScript Intermedio</h5>
+            <p>POO, closures, promesas y asincronía.</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-tag">Curso</span>
+            <h5>JavaScript Básico</h5>
+            <p>Fundamentos de JS — Educación IT.</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-tag">Curso</span>
+            <h5>PHP y SQL</h5>
+            <p>Consultas, CRUD y aplicaciones dinámicas.</p>
+          </div>
+          <div class="edu-item">
+            <span class="edu-tag">Curso</span>
+            <h5>Sass y CSS Moderno</h5>
+            <p>Grid, Flexbox, animaciones y arquitectura de estilos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
