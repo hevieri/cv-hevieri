@@ -216,10 +216,14 @@ body {
 .cv-dropdown-menu a i {
   width: 20px;
   text-align: center;
-  color: var(--violet);
   font-size: 1rem;
 }
-.cv-dropdown-menu a:last-child i {
+.cv-dropdown-menu a:nth-child(1) i,
+.cv-dropdown-menu a:nth-child(3) i {
+  color: var(--violet);
+}
+.cv-dropdown-menu a:nth-child(2) i,
+.cv-dropdown-menu a:nth-child(4) i {
   color: var(--frontend);
 }
 #cv-arrow {
