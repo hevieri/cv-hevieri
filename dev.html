@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erika · Dev Track</title>
+  <meta name="description" content="Desarrollo Web — Portafolio de Erika Helfenstern" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <span class="nav__logo">hevieri</span>
+    <div class="nav__links">
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> inicio</a>
+    </div>
+  </nav>
+
+  <main class="track-page">
+    <div class="track-page__head" style="color:var(--blue)">
+      <i class="fa-solid fa-laptop-code"></i> Track Dev
+    </div>
+
+    <section class="hero" style="margin-top:0">
+      <h1 class="hero__name">
+        Erika<br>
+        <span class="gradient-text">Helfenstern</span>
+      </h1>
+      <div class="hero__tags">
+        <span class="tag">Frontend Dev</span>
+        <span class="tag">React</span>
+      </div>
+      <p class="hero__desc">Desarrollo frontend, UI y construcción de apps web</p>
+      <div class="hero__actions">
+        <div class="cv-group">
+          <button class="btn" onclick="toggleCVDropdown(event)">
+            <i class="fa-solid fa-download"></i> descargar cv
+            <i class="fa-solid fa-chevron-down" id="cv-arrow"></i>
+          </button>
+          <div class="cv-dropdown" id="cv-dropdown">
+            <a href="cv-frontend-ats.pdf" download><i class="fa-solid fa-laptop-code"></i> Frontend (ATS)</a>
+            <a href="cv-frontend.pdf" download><i class="fa-regular fa-file-lines"></i> Frontend</a>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/hevieri/" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-linkedin-in"></i> linkedin</a>
+        <a href="https://github.com/hevieri" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-github"></i> github</a>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2>Stack Dev</h2>
+      </div>
+      <div class="stack__grid" id="dev-stack-grid">
+        <div class="card">
+          <div class="card__head"><i class="fa-solid fa-laptop-code" style="color:var(--blue)"></i> <span>Frontend</span></div>
+          <div class="stack__list" id="front-render"></div>
+        </div>
+        <div class="card">
+          <div class="card__head"><i class="fa-solid fa-server" style="color:var(--amber)"></i> <span>Back & Tools</span></div>
+          <div class="stack__list" id="back-render"></div>
+        </div>
+        <div class="card card--full">
+          <div class="card__head"><i class="fa-solid fa-arrows-rotate" style="color:var(--green)"></i> <span>Ágil</span></div>
+          <div class="stack__tags" id="agile-render"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="exp">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2>Experiencia Dev</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-code"></i>
+              <div><h3>No Country</h3><span class="tl__role">Frontend Developer · React & Tailwind</span></div>
+            </div>
+            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Reuniones</span><span>Trabajo en Equipo</span></div>
+            <p>Frontend en equipo con React y Tailwind, participando en reuniones de coordinación y entregas iterativas.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-laptop-code"></i>
+              <div><h3>Talently Lab</h3><span class="tl__role">Frontend Developer · React</span></div>
+            </div>
+            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Trabajo en Equipo</span></div>
+            <p>Desarrollo frontend con React y Tailwind en equipo, con reuniones de coordinación y revisiones de código.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-lightbulb"></i>
+              <div><h3>Proyectos Autodidactas</h3><span class="tl__role">Frontend · Backend · APIs</span></div>
+            </div>
+            <div class="tl__tags"><span>Frontend</span><span>Backend</span><span>Testing</span></div>
+            <p>Proyectos personales para aprender nuevas tecnologías y afinar habilidades.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-laptop-code"></i>
+              <div><h3>ElRincónDelFriki.net</h3><span class="tl__role">WordPress · Gestión integral</span></div>
+            </div>
+            <div class="tl__tags"><span>WordPress</span><span>SEO</span><span>Google Ads</span></div>
+            <p>Gestión integral del sitio: contenido, SEO, monetización con Google Ads y mantenimiento diario.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="edu">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2>Formación Dev</h2>
+      </div>
+      <div class="track__edu">
+        <div id="edu-front-render"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2>Proyectos</h2>
+      </div>
+      <div class="projects__grid">
+        <div class="card project-card">
+          <div class="project-card__icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Talently Lab</h3>
+          <p>Proyecto frontend colaborativo en equipo con React y Tailwind.</p>
+          <div class="project-card__tech"><span>React</span><span>Tailwind</span></div>
+          <span class="project-card__soon">próximamente</span>
+          <div class="project-card__confid">Por políticas de confidencialidad, el repositorio no es público.</div>
+        </div>
+        <div class="card project-card">
+          <div class="project-card__icon"><i class="fa-solid fa-code"></i></div>
+          <h3>No Country</h3>
+          <p>Proyecto frontend en equipo con React, Tailwind y metodologías ágiles.</p>
+          <div class="project-card__tech"><span>React</span><span>Tailwind</span></div>
+          <span class="project-card__soon">próximamente</span>
+          <div class="project-card__confid">Por políticas de confidencialidad, el repositorio no es público.</div>
+        </div>
+        <div class="card project-card" data-content="0"></div>
+        <div class="card project-card" data-content="1"></div>
+        <div class="card project-card" data-content="2"></div>
+        <div class="card project-card" data-content="3"></div>
+        <div class="card project-card" data-content="4"></div>
+        <div class="card project-card" data-content="5"></div>
+        <div class="card project-card" data-content="6"></div>
+        <div class="card project-card" data-content="7"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="mono">hevieri · 2026</span>
+      <div class="footer__links">
+        <a href="mailto:hevieri.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://github.com/hevieri" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hevieri/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const DEV_FRONT = [
+      { name: "HTML / CSS", icon: "fa-brands fa-html5" },
+      { name: "React / JS", icon: "fa-brands fa-react" },
+      { name: "Tailwind", icon: "fa-solid fa-wand-magic-sparkles" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+      { name: "jQuery", icon: "fa-solid fa-code-merge" },
+      { name: "Firebase", icon: "fa-solid fa-database" },
+      { name: "Git y GitHub", icon: "fa-brands fa-git-alt" },
+    ];
+    const DEV_BACK = [
+      { name: "PHP / SQL", icon: "fa-brands fa-php" },
+      { name: "WordPress", icon: "fa-brands fa-wordpress" },
+      { name: "GitHub", icon: "fa-brands fa-github" },
+      { name: "Localhost", icon: "fa-solid fa-house-laptop" },
+    ];
+    const DEV_AGILE = [
+      { name: "Scrum", icon: "fa-solid fa-arrows-rotate" },
+      { name: "Kanban", icon: "fa-solid fa-columns" },
+      { name: "Jira", icon: "fa-brands fa-jira" },
+      { name: "Trello", icon: "fa-brands fa-trello" },
+      { name: "ClickUp", icon: "fa-solid fa-list-check" },
+    ];
+    const DEV_EDU = [
+      { tag: "Tecnicatura", name: "Diseño Gráfico Digital", desc: "UX/UI, Figma, HTML, CSS, JS, Bootstrap, PHP, SQL." },
+      { tag: "Curso", name: "React.js", desc: "Hooks, estado, routing y consumo de APIs." },
+      { tag: "Curso", name: "JavaScript Intermedio", desc: "POO, closures, promesas, asincronía." },
+      { tag: "Curso", name: "JavaScript Básico", desc: "Fundamentos: variables, funciones, DOM." },
+      { tag: "Curso", name: "PHP y SQL", desc: "Consultas, CRUD y aplicaciones dinámicas." },
+      { tag: "Curso", name: "SQL", desc: "Joins, subconsultas e índices." },
+      { tag: "Curso", name: "Sass y CSS Moderno", desc: "Grid, Flexbox, animaciones." },
+      { tag: "Curso", name: "Diseño UX/UI con Figma", desc: "Prototipado y componentes reutilizables." },
+      { tag: "Curso", name: "Desarrollo Front-End", desc: "HTML, CSS, JS, Bootstrap, responsivo." },
+      { tag: "Curso", name: "Git & GitHub Avanzado", desc: "Ramas, merge, PRs y flujos colaborativos." },
+    ];
+    const PROJECTS = [
+      { title: "PokeAppi", desc: "App web con consumo de PokeAPI, diseño responsive y búsqueda de Pokémon.", repo: "https://github.com/hevieri/pokeappi", demo: "https://pokeappi.vercel.app/", tech: ["PokeAPI", "JavaScript", "CSS"] },
+      { title: "SlotMachine", desc: "Máquina tragamonedas interactiva con lógica en JavaScript y diseño retro.", repo: "https://github.com/hevieri/SlotMachine", demo: "https://slot-machine-nu-ecru.vercel.app/", tech: ["JavaScript", "CSS", "HTML"] },
+      { title: "Calculador", desc: "Suite de herramientas de conversión — múltiples calculadoras y conversores.", repo: "https://github.com/hevieri/Calculador", demo: "https://hevieri.github.io/Calculador/", tech: ["JavaScript", "HTML", "CSS"] },
+      { title: "Tasky", desc: "Gestor de tareas con visualización de datos — JSON a gráficos y tablas.", repo: "https://github.com/hevieri/Tasky", demo: "https://hevieri.github.io/Tasky/", tech: ["JavaScript", "JSON", "CSS"] },
+      { title: "Tienda", desc: "Plataforma web de comercio electrónico con diseño responsive y carrito de compras.", repo: "https://github.com/hevieri/Tienda", tech: ["PHP", "SQL"] },
+      { title: "Morningstar", desc: "Sitio responsive con HTML5 y CSS3, enfocado en accesibilidad y estructura semántica.", repo: "https://github.com/hevieri/Morningstar", demo: "https://hevieri.github.io/Morningstar/", tech: ["HTML5", "CSS3"] },
+      { title: "MangaX", desc: "App web de exploración de mangas con consumo de API, diseño responsive.", repo: "https://github.com/hevieri/MangaX", tech: ["React", "API", "JavaScript"] },
+      { title: "MugiwaraWeb", desc: "Sitio temático de One Piece con diseño responsive y estructura semántica.", repo: "https://github.com/hevieri/MugiwaraWeb", tech: ["PHP", "SQL"] },
+    ];
+    const $ = id => document.getElementById(id);
+    function tmpl(p) {
+      return `<div class="project-card__icon"><i class="fa-solid fa-layer-group"></i></div><h3>${p.title}</h3><p>${p.desc}</p>${p.tech ? `<div class="project-card__tech">${p.tech.map(t => `<span>${t}</span>`).join("")}</div>` : ""}<div class="project-card__links">${p.demo ? `<a href="${p.demo}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> demo</a>` : ""}<a href="${p.repo}" target="_blank"><i class="fa-brands fa-github"></i> código</a></div>`;
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      $("front-render").innerHTML = DEV_FRONT.map(i => `<div class="stack-item"><i class="${i.icon}"></i>${i.name}</div>`).join("");
+      $("back-render").innerHTML = DEV_BACK.map(i => `<div class="stack-item"><i class="${i.icon}"></i>${i.name}</div>`).join("");
+      $("agile-render").innerHTML = DEV_AGILE.map(i => `<span class="pill"><i class="${i.icon}"></i>${i.name}</span>`).join("");
+      $("edu-front-render").innerHTML = DEV_EDU.map(i => `<div class="edu__item"><span class="edu__tag">${i.tag}</span><div class="edu__name">${i.name}</div><div class="edu__desc">${i.desc}</div></div>`).join("");
+      PROJECTS.forEach((p, i) => { const el = document.querySelector(`[data-content="${i}"]`); if (el) el.innerHTML = tmpl(p); });
+    });
+    function toggleCVDropdown(e) {
+      e.stopPropagation();
+      const m = $("cv-dropdown"), a = $("cv-arrow");
+      m.classList.toggle("open");
+      a.style.transform = m.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
+    }
+    document.addEventListener("click", () => {
+      const m = $("cv-dropdown"), a = $("cv-arrow");
+      if (m?.classList.contains("open")) { m.classList.remove("open"); a.style.transform = "rotate(0)"; }
+    });
+  </script>
+</body>
+</html>

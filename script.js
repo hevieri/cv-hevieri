@@ -54,14 +54,14 @@ const DATA = {
     ],
   },
   projects: [
-    { title: "PokeAppi", desc: "App web con consumo de PokeAPI, diseño responsive y búsqueda de Pokémon.", repo: "https://github.com/hevieri/pokeappi", demo: "https://pokeappi.vercel.app/" },
-    { title: "SlotMachine", desc: "Máquina tragamonedas interactiva con lógica en JavaScript y diseño retro.", repo: "https://github.com/hevieri/SlotMachine", demo: "https://slot-machine-nu-ecru.vercel.app/" },
-    { title: "PokeIApi", desc: "App web con consumo de API de Pokémon, diseño responsive y búsqueda interactiva.", repo: "https://github.com/hevieri/PokeIApi", demo: "https://hevieri.github.io/PokeIApi/" },
-    { title: "Calculador", desc: "Suite de herramientas de conversión — múltiples calculadoras y conversores.", repo: "https://github.com/hevieri/Calculador", demo: "https://hevieri.github.io/Calculador/" },
-    { title: "Tasky", desc: "Gestor de tareas con visualización de datos — JSON a gráficos y tablas.", repo: "https://github.com/hevieri/Tasky", demo: "https://hevieri.github.io/Tasky/" },
-    { title: "Tienda", desc: "Plataforma web de comercio electrónico con diseño responsive y carrito de compras.", repo: "https://github.com/hevieri/Tienda" },
-    { title: "Morningstar", desc: "Sitio responsive con HTML5 y CSS3, enfocado en accesibilidad y estructura semántica.", repo: "https://github.com/hevieri/Morningstar", demo: "https://hevieri.github.io/Morningstar/" },
-    { title: "MugiwaraWeb", desc: "Sitio temático de One Piece con diseño responsive y estructura semántica.", repo: "https://github.com/hevieri/MugiwaraWeb" },
+    { title: "PokeAppi", desc: "App web con consumo de PokeAPI, diseño responsive y búsqueda de Pokémon.", repo: "https://github.com/hevieri/pokeappi", demo: "https://pokeappi.vercel.app/", tech: ["PokeAPI", "JavaScript", "CSS"] },
+    { title: "SlotMachine", desc: "Máquina tragamonedas interactiva con lógica en JavaScript y diseño retro.", repo: "https://github.com/hevieri/SlotMachine", demo: "https://slot-machine-nu-ecru.vercel.app/", tech: ["JavaScript", "CSS", "HTML"] },
+    { title: "Calculador", desc: "Suite de herramientas de conversión — múltiples calculadoras y conversores.", repo: "https://github.com/hevieri/Calculador", demo: "https://hevieri.github.io/Calculador/", tech: ["JavaScript", "HTML", "CSS"] },
+    { title: "Tasky", desc: "Gestor de tareas con visualización de datos — JSON a gráficos y tablas.", repo: "https://github.com/hevieri/Tasky", demo: "https://hevieri.github.io/Tasky/", tech: ["JavaScript", "JSON", "CSS"] },
+    { title: "Tienda", desc: "Plataforma web de comercio electrónico con diseño responsive y carrito de compras.", repo: "https://github.com/hevieri/Tienda", tech: ["PHP", "SQL"] },
+    { title: "Morningstar", desc: "Sitio responsive con HTML5 y CSS3, enfocado en accesibilidad y estructura semántica.", repo: "https://github.com/hevieri/Morningstar", demo: "https://hevieri.github.io/Morningstar/", tech: ["HTML5", "CSS3"] },
+    { title: "MangaX", desc: "App web de exploración de mangas con consumo de API, diseño responsive.", repo: "https://github.com/hevieri/MangaX", tech: ["React", "API", "JavaScript"] },
+    { title: "MugiwaraWeb", desc: "Sitio temático de One Piece con diseño responsive y estructura semántica.", repo: "https://github.com/hevieri/MugiwaraWeb", tech: ["PHP", "SQL"] },
   ],
 };
 
@@ -77,17 +77,16 @@ const templates = {
   stackItem: i => `<div class="stack-item"><i class="${i.icon}"></i>${i.name}</div>`,
   pill: i => `<span class="pill"><i class="${i.icon}"></i>${i.name}</span>`,
   edu: i => `<div class="edu__item"><span class="edu__tag">${i.tag}</span><div class="edu__name">${i.name}</div><div class="edu__desc">${i.desc}</div></div>`,
-  project: p => `<div class="project-card__icon"><i class="fa-solid fa-layer-group"></i></div><h3>${p.title}</h3><p>${p.desc}</p><div class="project-card__links">${p.demo ? `<a href="${p.demo}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> demo</a>` : ""}<a href="${p.repo}" target="_blank"><i class="fa-brands fa-github"></i> código</a></div>`,
+  project: p => `<div class="project-card__icon"><i class="fa-solid fa-layer-group"></i></div><h3>${p.title}</h3><p>${p.desc}</p>${p.tech ? `<div class="project-card__tech">${p.tech.map(t => `<span>${t}</span>`).join("")}</div>` : ""}<div class="project-card__links">${p.demo ? `<a href="${p.demo}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> demo</a>` : ""}<a href="${p.repo}" target="_blank"><i class="fa-brands fa-github"></i> código</a></div>`,
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   render(DATA.stack.qa, "qa-render", templates.stackItem);
-  render(DATA.stack.agile, "qa-agile-render", templates.pill);
-  render(DATA.education.qa, "qa-edu-render", templates.edu);
-
-  render(DATA.stack.front, "dev-front-render", templates.stackItem);
-  render(DATA.stack.back, "dev-back-render", templates.stackItem);
-  render(DATA.education.front, "dev-edu-render", templates.edu);
+  render(DATA.stack.front, "front-render", templates.stackItem);
+  render(DATA.stack.back, "back-render", templates.stackItem);
+  render(DATA.stack.agile, "agile-render", templates.pill);
+  render(DATA.education.qa, "edu-qa-render", templates.edu);
+  render(DATA.education.front, "edu-front-render", templates.edu);
 
   DATA.projects.forEach((p, i) => {
     const el = document.querySelector(`[data-content="${i}"]`);

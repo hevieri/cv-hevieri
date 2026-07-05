@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erika · QA Track</title>
+  <meta name="description" content="Testing QA — Portafolio de Erika Helfenstern" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <span class="nav__logo">hevieri</span>
+    <div class="nav__links">
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> inicio</a>
+    </div>
+  </nav>
+
+  <main class="track-page">
+    <div class="track-page__head" style="color:var(--violet)">
+      <i class="fa-solid fa-flask"></i> Track QA
+    </div>
+
+    <section class="hero" style="margin-top:0">
+      <h1 class="hero__name">
+        Erika<br>
+        <span class="gradient-text">Helfenstern</span>
+      </h1>
+      <div class="hero__tags">
+        <span class="tag">QA Tester</span>
+        <span class="tag">Automation</span>
+      </div>
+      <p class="hero__desc">Testing funcional, automatización y calidad de software</p>
+      <div class="hero__actions">
+        <div class="cv-group">
+          <button class="btn" onclick="toggleCVDropdown(event)">
+            <i class="fa-solid fa-download"></i> descargar cv
+            <i class="fa-solid fa-chevron-down" id="cv-arrow"></i>
+          </button>
+          <div class="cv-dropdown" id="cv-dropdown">
+            <a href="cv-qa-ats.pdf" download><i class="fa-solid fa-flask"></i> Testing (ATS)</a>
+            <a href="cv-qa.pdf" download><i class="fa-regular fa-file-lines"></i> Testing</a>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/hevieri/" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-linkedin-in"></i> linkedin</a>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2>Stack QA</h2>
+      </div>
+      <div class="stack__grid" id="qa-stack-grid">
+        <div class="card">
+          <div class="card__head"><i class="fa-solid fa-flask" style="color:var(--violet)"></i> <span>Testing</span></div>
+          <div class="stack__list" id="qa-render"></div>
+        </div>
+        <div class="card">
+          <div class="card__head"><i class="fa-solid fa-arrows-rotate" style="color:var(--green)"></i> <span>Ágil</span></div>
+          <div class="stack__tags" id="agile-render"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="exp">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2>Experiencia QA</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-flask"></i>
+              <div><h3>Talently Lab</h3><span class="tl__role">QA Tester · Manual Testing</span></div>
+            </div>
+            <div class="tl__tags"><span>Testing Manual</span><span>Postman</span><span>Bug Reports</span></div>
+            <p>Pruebas manuales funcionales, reporte de bugs y testing de APIs con Postman en equipo.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-users"></i>
+              <div><h3>Adopta un Junior</h3><span class="tl__role">QA Tester · Equipo colaborativo</span></div>
+            </div>
+            <div class="tl__tags"><span>QA Testing</span><span>Pruebas Funcionales</span></div>
+            <p>QA Tester en equipos multidisciplinarios con reuniones de coordinación y ciclos de feedback.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-bug"></i>
+              <div><h3>uTest</h3><span class="tl__role">Web & Mobile Testing</span></div>
+            </div>
+            <div class="tl__tags"><span>Web Testing</span><span>Mobile Testing</span><span>Bug Reports</span></div>
+            <p>Testing funcional en escenarios reales Web y Mobile, con reportes de bugs precisos.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-lightbulb"></i>
+              <div><h3>Proyectos Autodidactas</h3><span class="tl__role">Frontend · Backend · APIs</span></div>
+            </div>
+            <div class="tl__tags"><span>Frontend</span><span>Backend</span><span>Testing</span></div>
+            <p>Proyectos personales para aprender nuevas tecnologías y afinar habilidades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="edu">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2>Formación QA</h2>
+      </div>
+      <div class="track__edu">
+        <div id="edu-qa-render"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2>Proyectos</h2>
+      </div>
+      <div class="projects__grid">
+        <div class="card project-card">
+          <div class="project-card__icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Adopta un Junior</h3>
+          <p>QA Tester en equipos multidisciplinarios con pruebas funcionales y reporte de bugs.</p>
+          <div class="project-card__tech"><span>QA Testing</span><span>Funcional</span></div>
+          <span class="project-card__soon">próximamente</span>
+          <div class="project-card__confid">Por políticas de confidencialidad, el repositorio no es público.</div>
+        </div>
+        <div class="card project-card">
+          <div class="project-card__icon"><i class="fa-solid fa-flask"></i></div>
+          <h3>Talento Lab</h3>
+          <p>Testing manual y automatizado con Postman, reportes de bugs y casos de prueba.</p>
+          <div class="project-card__tech"><span>Postman</span><span>Manual Testing</span></div>
+          <div class="project-card__links">
+            <a href="https://github.com/hevieri/TestingPortfolio/blob/main/Test%20Cases/Test%20Cases%20-%20TalentoLab.md" target="_blank"><i class="fa-brands fa-github"></i> ver casos de prueba</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="mono">hevieri · 2026</span>
+      <div class="footer__links">
+        <a href="mailto:hevieri.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://github.com/hevieri" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hevieri/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const QA_STACK = [
+      { name: "Manual Testing", icon: "fa-solid fa-magnifying-glass" },
+      { name: "QA Automation", icon: "fa-solid fa-robot" },
+      { name: "uTest Platform", icon: "fa-solid fa-vial-circle-check" },
+      { name: "Mobile Testing", icon: "fa-solid fa-mobile-screen" },
+    ];
+    const QA_AGILE = [
+      { name: "Scrum", icon: "fa-solid fa-arrows-rotate" },
+      { name: "Kanban", icon: "fa-solid fa-columns" },
+      { name: "Jira", icon: "fa-brands fa-jira" },
+      { name: "Trello", icon: "fa-brands fa-trello" },
+      { name: "ClickUp", icon: "fa-solid fa-list-check" },
+    ];
+    const QA_EDU = [
+      { tag: "Carrera", name: "Carrera QA Automation Testing", desc: "Cursos avanzados en metodologías de testing y automatización." },
+      { tag: "Bootcamp", name: "Testing QA — Talento Tech", desc: "Formación intensiva en testing manual y casos de prueba." },
+      { tag: "Curso", name: "Automatización con Selenium", desc: "Pruebas automatizadas con Selenium WebDriver." },
+      { tag: "Curso", name: "Pruebas de API con Postman", desc: "Testing REST, colecciones y aserciones dinámicas." },
+      { tag: "Curso", name: "Pruebas de Rendimiento", desc: "Estrés y carga en aplicaciones web." },
+      { tag: "Curso", name: "Gestión de Casos de Prueba", desc: "TestRail y buenas prácticas ISTQB." },
+      { tag: "Curso", name: "Metodologías Ágiles (Scrum)", desc: "Roles, ceremonias y equipos de desarrollo." },
+      { tag: "Curso", name: "Testing Automation", desc: "Automatización de pruebas con Selenium y Postman." },
+    ];
+    const $ = id => document.getElementById(id);
+    document.addEventListener("DOMContentLoaded", () => {
+      $("qa-render").innerHTML = QA_STACK.map(i => `<div class="stack-item"><i class="${i.icon}"></i>${i.name}</div>`).join("");
+      $("agile-render").innerHTML = QA_AGILE.map(i => `<span class="pill"><i class="${i.icon}"></i>${i.name}</span>`).join("");
+      $("edu-qa-render").innerHTML = QA_EDU.map(i => `<div class="edu__item"><span class="edu__tag">${i.tag}</span><div class="edu__name">${i.name}</div><div class="edu__desc">${i.desc}</div></div>`).join("");
+    });
+    function toggleCVDropdown(e) {
+      e.stopPropagation();
+      const m = $("cv-dropdown"), a = $("cv-arrow");
+      m.classList.toggle("open");
+      a.style.transform = m.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
+    }
+    document.addEventListener("click", () => {
+      const m = $("cv-dropdown"), a = $("cv-arrow");
+      if (m?.classList.contains("open")) { m.classList.remove("open"); a.style.transform = "rotate(0)"; }
+    });
+  </script>
+</body>
+</html>

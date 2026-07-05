@@ -82,6 +82,47 @@ body::before {
 
 .nav__links a:hover { color:var(--violet) }
 
+.nav__track {
+  position:relative;
+  padding:.2rem .65rem !important;
+  border-radius:6px;
+  font-weight:700 !important;
+  transition:all .25s !important
+}
+
+.nav__track::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:6px;
+  opacity:0;
+  transition:opacity .25s
+}
+
+.nav__track--qa {
+  color:var(--violet) !important;
+  background:rgba(167,139,250,.08);
+  box-shadow:0 0 12px rgba(167,139,250,.08)
+}
+
+.nav__track--qa:hover {
+  background:rgba(167,139,250,.18);
+  box-shadow:0 0 20px rgba(167,139,250,.2);
+  transform:translateY(-1px)
+}
+
+.nav__track--dev {
+  color:var(--blue) !important;
+  background:rgba(96,165,250,.08);
+  box-shadow:0 0 12px rgba(96,165,250,.08)
+}
+
+.nav__track--dev:hover {
+  background:rgba(96,165,250,.18);
+  box-shadow:0 0 20px rgba(96,165,250,.2);
+  transform:translateY(-1px)
+}
+
 /* ── MAIN ── */
 main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 
@@ -115,39 +156,77 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
   letter-spacing:-.3px
 }
 
-/* ── TRACK ── */
-.track {
-  position:relative;
-  padding:0 0 0 1.2rem;
-  border-left:2px solid var(--border)
+/* ── TRACK BUTTONS ── */
+.hero__tracks {
+  display:flex;
+  gap:.6rem;
+  margin-top:1.2rem;
+  padding-top:1rem;
+  border-top:1px solid var(--border)
 }
 
-.track__bar {
-  position:absolute;
-  top:0;
-  left:-2px;
-  width:3px;
-  height:32px;
-  border-radius:0 0 3px 3px
+.track-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:.5rem 1rem;
+  border:1px solid var(--violet-soft);
+  border-radius:8px;
+  font-size:.72rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  color:var(--violet);
+  text-decoration:none;
+  transition:all .25s;
+  font-family:"JetBrains Mono",monospace
 }
 
-.track .section__head { margin-bottom:1.5rem }
+.track-btn:hover { background:var(--violet-soft) }
 
-.track__stack {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:1rem;
-  margin-bottom:2rem
+.track-btn--dev {
+  border-color:var(--blue-soft);
+  color:var(--blue)
 }
 
-.track__subtitle {
-  font-size:.8rem;
+.track-btn--dev:hover { background:var(--blue-soft) }
+
+.nav__track {
+  color:var(--violet) !important;
+  border-left:1px solid var(--border);
+  padding-left:.8rem
+}
+
+.nav__track--dev { color:var(--blue) !important }
+
+/* ── SEPARATE TRACK PAGES ── */
+.track-page {
+  margin-top:3.5rem;
+  margin-bottom:2.5rem
+}
+
+.track-page .hero {
+  margin-top:2rem;
+  margin-bottom:2.5rem
+}
+
+.track-page__head {
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  font-size:.9rem;
   font-weight:700;
   text-transform:uppercase;
   letter-spacing:1px;
-  color:var(--text-second);
-  margin-bottom:1rem
+  margin-bottom:2rem;
+  font-family:"JetBrains Mono",monospace
 }
+
+.track-page__head i { font-size:1rem }
+
+.track-page .stack__grid { margin-bottom:2.5rem }
+
+.track-page .timeline { margin-bottom:2.5rem }
 
 .track__edu { display:grid; gap:.5rem }
 .track__edu .edu__item { margin-bottom:0 }
@@ -180,7 +259,6 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 .card__head i { font-size:1rem }
 
 .card--full { grid-column:1/-1 }
-.card--track { padding:1.1rem 1.2rem }
 
 /* ── HERO ── */
 .hero {
@@ -356,10 +434,9 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 
 .stack-item i { width:14px; text-align:center; font-size:.8rem }
 
-.track--qa .card:nth-child(1) .stack-item i { color:var(--violet) }
-.track--qa .card:nth-child(2) .stack-item i { color:var(--green) }
-.track--dev .card:nth-child(1) .stack-item i { color:var(--blue) }
-.track--dev .card:nth-child(2) .stack-item i { color:var(--amber) }
+.stack__grid .card:nth-child(1) .stack-item i { color:var(--violet) }
+.stack__grid .card:nth-child(2) .stack-item i { color:var(--blue) }
+.stack__grid .card:nth-child(3) .stack-item i { color:var(--amber) }
 
 .stack__tags { display:flex; flex-wrap:wrap; gap:.4rem }
 
@@ -477,8 +554,7 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 
 .edu__item:hover { border-color:var(--border-hover); background:var(--card-hover) }
 
-.track--qa .edu__item { border-left-color:var(--violet) }
-.track--dev .edu__item { border-left-color:var(--blue) }
+.edu__item:nth-child(even) { border-left-color:var(--blue) }
 
 .edu__tag {
   display:inline-block;
@@ -492,8 +568,7 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
   color:var(--violet)
 }
 
-.track--qa .edu__tag { background:var(--violet-soft); color:var(--violet) }
-.track--dev .edu__tag { background:var(--blue-soft); color:var(--blue) }
+.edu__item:nth-child(even) .edu__tag { background:var(--blue-soft); color:var(--blue) }
 
 .edu__name { font-size:.82rem; font-weight:700; margin-bottom:1px }
 .edu__desc { color:var(--muted); font-size:.72rem }
@@ -519,6 +594,22 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 
 .project-card__links { display:flex; gap:.8rem }
 
+.project-card__tech {
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+  margin-bottom:.6rem
+}
+
+.project-card__tech span {
+  font-size:.58rem;
+  font-weight:600;
+  padding:1px 6px;
+  border-radius:4px;
+  background:var(--violet-soft);
+  color:var(--violet)
+}
+
 .project-card__links a {
   display:inline-flex;
   align-items:center;
@@ -532,6 +623,26 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 
 .project-card__links a:hover { color:var(--violet) }
 .project-card__links a i { font-size:.85rem }
+
+.project-card__soon {
+  display:inline-block;
+  font-size:.55rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  padding:2px 8px;
+  border-radius:4px;
+  background:rgba(251,191,36,.12);
+  color:var(--amber);
+  margin-bottom:.4rem
+}
+
+.project-card__confid {
+  font-size:.65rem;
+  color:var(--muted);
+  font-style:italic;
+  line-height:1.4
+}
 
 /* ── FOOTER ── */
 .footer {
@@ -555,14 +666,18 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 @media(max-width:800px) {
   .stack__grid { grid-template-columns:1fr }
   .edu__grid { grid-template-columns:1fr }
-  .track__stack { grid-template-columns:1fr }
   .footer { flex-direction:column; text-align:center; gap:.5rem }
 }
 
 @media(max-width:600px) {
   .nav__links { display:none }
+  .nav__links:only-child { display:flex; gap:.8rem; font-size:.78rem }
   .hero__actions { flex-direction:column }
   .hero__actions .btn { width:100%; justify-content:center }
+  .hero__tracks { flex-direction:column }
+  .hero__tracks .track-btn { width:100%; justify-content:center }
   .tl__card { padding:1rem }
   .section { margin-bottom:3rem }
+  .track-page .hero__actions { flex-direction:row }
+  .track-page .hero__actions .btn { width:auto }
 }
