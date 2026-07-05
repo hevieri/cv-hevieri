@@ -1,156 +1,110 @@
 const DATA = {
   stack: {
     qa: [
-      { n: "Manual Testing", i: "fa-solid fa-magnifying-glass" },
-      { n: "QA Automation", i: "fa-solid fa-robot" },
-      { n: "uTest Platform", i: "fa-solid fa-vial-circle-check" },
-      { n: "Mobile Testing", i: "fa-solid fa-mobile-screen" },
+      { name: "Manual Testing", icon: "fa-solid fa-magnifying-glass" },
+      { name: "QA Automation", icon: "fa-solid fa-robot" },
+      { name: "uTest Platform", icon: "fa-solid fa-vial-circle-check" },
+      { name: "Mobile Testing", icon: "fa-solid fa-mobile-screen" },
     ],
     front: [
-      { n: "HTML / CSS", i: "fa-brands fa-html5" },
-      { n: "React / JS", i: "fa-brands fa-react" },
-      { n: "Tailwind", i: "fa-solid fa-wand-magic-sparkles" },
-      { n: "Bootstrap", i: "fa-brands fa-bootstrap" },
-      { n: "jQuery", i: "fa-solid fa-code-merge" },
-      { n: "Firebase", i: "fa-solid fa-database" },
-      { n: "Git y GitHub", i: "fa-brands fa-git-alt" },
+      { name: "HTML / CSS", icon: "fa-brands fa-html5" },
+      { name: "React / JS", icon: "fa-brands fa-react" },
+      { name: "Tailwind", icon: "fa-solid fa-wand-magic-sparkles" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+      { name: "jQuery", icon: "fa-solid fa-code-merge" },
+      { name: "Firebase", icon: "fa-solid fa-database" },
+      { name: "Git y GitHub", icon: "fa-brands fa-git-alt" },
     ],
     back: [
-      { n: "PHP / SQL", i: "fa-brands fa-php" },
-      { n: "WordPress", i: "fa-brands fa-wordpress" },
-      { n: "GitHub", i: "fa-brands fa-github" },
-      { n: "Localhost", i: "fa-solid fa-house-laptop" },
+      { name: "PHP / SQL", icon: "fa-brands fa-php" },
+      { name: "WordPress", icon: "fa-brands fa-wordpress" },
+      { name: "GitHub", icon: "fa-brands fa-github" },
+      { name: "Localhost", icon: "fa-solid fa-house-laptop" },
     ],
     agile: [
-      { n: "Scrum", i: "fa-solid fa-arrows-rotate" },
-      { n: "Kanban", i: "fa-solid fa-columns" },
-      { n: "Jira", i: "fa-brands fa-jira" },
-      { n: "Trello", i: "fa-brands fa-trello" },
-      { n: "ClickUp", i: "fa-solid fa-list-check" },
+      { name: "Scrum", icon: "fa-solid fa-arrows-rotate" },
+      { name: "Kanban", icon: "fa-solid fa-columns" },
+      { name: "Jira", icon: "fa-brands fa-jira" },
+      { name: "Trello", icon: "fa-brands fa-trello" },
+      { name: "ClickUp", icon: "fa-solid fa-list-check" },
+    ],
+  },
+  education: {
+    qa: [
+      { tag: "Carrera", name: "Carrera QA Automation Testing", desc: "Cursos avanzados en metodologías de testing y automatización." },
+      { tag: "Bootcamp", name: "Testing QA — Talento Tech", desc: "Formación intensiva en testing manual y casos de prueba." },
+      { tag: "Curso", name: "Automatización con Selenium", desc: "Pruebas automatizadas con Selenium WebDriver." },
+      { tag: "Curso", name: "Pruebas de API con Postman", desc: "Testing REST, colecciones y aserciones dinámicas." },
+      { tag: "Curso", name: "Pruebas de Rendimiento", desc: "Estrés y carga en aplicaciones web." },
+      { tag: "Curso", name: "Gestión de Casos de Prueba", desc: "TestRail y buenas prácticas ISTQB." },
+      { tag: "Curso", name: "Metodologías Ágiles (Scrum)", desc: "Roles, ceremonias y equipos de desarrollo." },
+      { tag: "Curso", name: "Testing Automation", desc: "Automatización de pruebas con Selenium y Postman." },
+    ],
+    front: [
+      { tag: "Tecnicatura", name: "Diseño Gráfico Digital", desc: "UX/UI, Figma, HTML, CSS, JS, Bootstrap, PHP, SQL." },
+      { tag: "Curso", name: "React.js", desc: "Hooks, estado, routing y consumo de APIs." },
+      { tag: "Curso", name: "JavaScript Intermedio", desc: "POO, closures, promesas, asincronía." },
+      { tag: "Curso", name: "JavaScript Básico", desc: "Fundamentos: variables, funciones, DOM." },
+      { tag: "Curso", name: "PHP y SQL", desc: "Consultas, CRUD y aplicaciones dinámicas." },
+      { tag: "Curso", name: "SQL", desc: "Joins, subconsultas e índices." },
+      { tag: "Curso", name: "Sass y CSS Moderno", desc: "Grid, Flexbox, animaciones." },
+      { tag: "Curso", name: "Diseño UX/UI con Figma", desc: "Prototipado y componentes reutilizables." },
+      { tag: "Curso", name: "Desarrollo Front-End", desc: "HTML, CSS, JS, Bootstrap, responsivo." },
+      { tag: "Curso", name: "Git & GitHub Avanzado", desc: "Ramas, merge, PRs y flujos colaborativos." },
     ],
   },
   projects: [
-    {
-      t: "Calculador",
-      d: "Diferentes tipos de conversores",
-      repo: "https://github.com/hevieri/Calculador",
-      demo: "https://hevieri.github.io/Calculador/",
-    },
-    {
-      t: "Gestor de tareas",
-      d: "Visualiza los Json en graficos y tablas",
-      repo: "https://github.com/hevieri/Tasky",
-      demo: "https://hevieri.github.io/Tasky/",
-    },
+    { title: "PokeAppi", desc: "App web con consumo de PokeAPI, diseño responsive y búsqueda de Pokémon.", repo: "https://github.com/hevieri/pokeappi", demo: "https://pokeappi.vercel.app/" },
+    { title: "SlotMachine", desc: "Máquina tragamonedas interactiva con lógica en JavaScript y diseño retro.", repo: "https://github.com/hevieri/SlotMachine", demo: "https://slot-machine-nu-ecru.vercel.app/" },
+    { title: "PokeIApi", desc: "App web con consumo de API de Pokémon, diseño responsive y búsqueda interactiva.", repo: "https://github.com/hevieri/PokeIApi", demo: "https://hevieri.github.io/PokeIApi/" },
+    { title: "Calculador", desc: "Suite de herramientas de conversión — múltiples calculadoras y conversores.", repo: "https://github.com/hevieri/Calculador", demo: "https://hevieri.github.io/Calculador/" },
+    { title: "Tasky", desc: "Gestor de tareas con visualización de datos — JSON a gráficos y tablas.", repo: "https://github.com/hevieri/Tasky", demo: "https://hevieri.github.io/Tasky/" },
+    { title: "Tienda", desc: "Plataforma web de comercio electrónico con diseño responsive y carrito de compras.", repo: "https://github.com/hevieri/Tienda" },
+    { title: "Morningstar", desc: "Sitio responsive con HTML5 y CSS3, enfocado en accesibilidad y estructura semántica.", repo: "https://github.com/hevieri/Morningstar", demo: "https://hevieri.github.io/Morningstar/" },
+    { title: "MugiwaraWeb", desc: "Sitio temático de One Piece con diseño responsive y estructura semántica.", repo: "https://github.com/hevieri/MugiwaraWeb" },
   ],
 };
 
+const $ = id => document.getElementById(id);
+
+function render(list, id, fn) {
+  const el = $(id);
+  if (!el) return;
+  el.innerHTML = list.map(fn).join("");
+}
+
+const templates = {
+  stackItem: i => `<div class="stack-item"><i class="${i.icon}"></i>${i.name}</div>`,
+  pill: i => `<span class="pill"><i class="${i.icon}"></i>${i.name}</span>`,
+  edu: i => `<div class="edu__item"><span class="edu__tag">${i.tag}</span><div class="edu__name">${i.name}</div><div class="edu__desc">${i.desc}</div></div>`,
+  project: p => `<div class="project-card__icon"><i class="fa-solid fa-layer-group"></i></div><h3>${p.title}</h3><p>${p.desc}</p><div class="project-card__links">${p.demo ? `<a href="${p.demo}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> demo</a>` : ""}<a href="${p.repo}" target="_blank"><i class="fa-brands fa-github"></i> código</a></div>`,
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  const inject = (list, id) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.innerHTML = list
-      .map(
-        (item) => `
-            <div class="stack-item">
-                <i class="${item.i}"></i>
-                <span>${item.n}</span>
-            </div>
-        `,
-      )
-      .join("");
-  };
+  render(DATA.stack.qa, "qa-render", templates.stackItem);
+  render(DATA.stack.front, "front-render", templates.stackItem);
+  render(DATA.stack.back, "back-render", templates.stackItem);
+  render(DATA.stack.agile, "agile-render", templates.pill);
+  render(DATA.education.qa, "edu-qa-render", templates.edu);
+  render(DATA.education.front, "edu-front-render", templates.edu);
 
-  const injectAgile = (list, id) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.innerHTML = list
-      .map(
-        (item) => `
-            <span class="agile-item">
-                <i class="${item.i}"></i>
-                ${item.n}
-            </span>
-        `,
-      )
-      .join("");
-  };
-
-  inject(DATA.stack.qa, "qa-render");
-  inject(DATA.stack.front, "front-render");
-  inject(DATA.stack.back, "back-render");
-  injectAgile(DATA.stack.agile, "agile-render");
-
-  const pContainer = document.getElementById("mini-projects-list");
-  if (pContainer) {
-    pContainer.innerHTML = DATA.projects
-      .map(
-        (p) => `
-            <div class="mini-card">
-                <div>
-                    <h5>${p.t}</h5>
-                    <p>${p.d}</p>
-                    <div class="project-links">
-                        <a href="${p.repo}" target="_blank" class="icon-link">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="${p.demo}" target="_blank" class="icon-link">
-                            <i class="fa-solid fa-globe"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `,
-      )
-      .join("");
-  }
-});
-
-function toggleAccordion(bodyId, arrowId) {
-  const body = document.getElementById(bodyId);
-  const arrow = document.getElementById(arrowId);
-
-  if (body.classList.contains("open")) {
-    body.style.maxHeight = null;
-    body.classList.remove("open");
-    arrow.classList.remove("rotate");
-  } else {
-    body.style.maxHeight = body.scrollHeight + "px";
-    body.classList.add("open");
-    arrow.classList.add("rotate");
-  }
-}
-
-function toggleCVDropdown(e) {
-  e.stopPropagation();
-  const menu = document.getElementById("cv-dropdown-menu");
-  const arrow = document.getElementById("cv-arrow");
-  menu.classList.toggle("open");
-  arrow.style.transform = menu.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
-}
-
-document.addEventListener("click", () => {
-  const menu = document.getElementById("cv-dropdown-menu");
-  const arrow = document.getElementById("cv-arrow");
-  if (menu && menu.classList.contains("open")) {
-    menu.classList.remove("open");
-    arrow.style.transform = "rotate(0)";
-  }
+  DATA.projects.forEach((p, i) => {
+    const el = document.querySelector(`[data-content="${i}"]`);
+    if (el) el.innerHTML = templates.project(p);
+  });
 });
 
 function toggleCVDropdown(e) {
   e.stopPropagation();
-  const menu = document.getElementById("cv-dropdown-menu");
-  const arrow = document.getElementById("cv-arrow");
-  menu.classList.toggle("open");
-  arrow.style.transform = menu.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
+  const m = $("cv-dropdown"), a = $("cv-arrow");
+  m.classList.toggle("open");
+  a.style.transform = m.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
 }
 
 document.addEventListener("click", () => {
-  const menu = document.getElementById("cv-dropdown-menu");
-  const arrow = document.getElementById("cv-arrow");
-  if (menu && menu.classList.contains("open")) {
-    menu.classList.remove("open");
-    arrow.style.transform = "rotate(0)";
+  const m = $("cv-dropdown"), a = $("cv-arrow");
+  if (m?.classList.contains("open")) {
+    m.classList.remove("open");
+    a.style.transform = "rotate(0)";
   }
 });

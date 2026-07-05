@@ -1,420 +1,214 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Erika Helfenstern | Portfolio Profesional</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erika Helfenstern · Dev & QA</title>
+  <meta name="description" content="Portfolio de Erika Helfenstern — Desarrollo Web y Testing QA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="animated-bg">
-      <div class="v-blob v-blob-1"></div>
-      <div class="v-blob v-blob-2"></div>
-      <div class="v-blob v-blob-3"></div>
+  <nav class="nav">
+    <span class="nav__logo">hevieri</span>
+    <div class="nav__links">
+      <a href="#stack">stack</a>
+      <a href="#exp">exp</a>
+      <a href="#edu">edu</a>
+      <a href="#projects">proyectos</a>
     </div>
+  </nav>
 
-    <main class="main-wrapper">
-      <section class="hero glass-panel">
-        <div class="hero__info">
-          <span class="badge">Developer & QA Tester Junior</span>
-          <h1 class="hero__name">
-            Erika <span class="violet-glow">Helfenstern</span>
-          </h1>
-          <p class="hero__subtitle">
-            Hevieri · Desarrollo Web y Testing QA. Curiosa por naturaleza,
-            siempre metiéndome en algo nuevo.
-          </p>
-
-          <div class="hero__socials">
-            <a href="https://www.linkedin.com/in/hevieri/" target="_blank">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/hevieri" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://wa.me/1162178105" target="_blank">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="mailto:hevieri.dev@gmail.com" target="_blank">
-              <i class="fa-regular fa-envelope"></i>
-            </a>
+  <main>
+    <section class="hero">
+      <div class="hero__badge">
+        <span class="status-dot"></span> disponible
+      </div>
+      <h1 class="hero__name">
+        Erika<br>
+        <span class="gradient-text">Helfenstern</span>
+      </h1>
+      <div class="hero__tags">
+        <span class="tag">QA Tester</span>
+        <span class="tag">Frontend Dev</span>
+      </div>
+      <p class="hero__desc">Desarrollo web y testing QA. <span class="mono">never stop learning</span></p>
+      <div class="hero__actions">
+        <div class="cv-group">
+          <button class="btn" onclick="toggleCVDropdown(event)">
+            <i class="fa-solid fa-download"></i> descargar cv
+            <i class="fa-solid fa-chevron-down" id="cv-arrow"></i>
+          </button>
+          <div class="cv-dropdown" id="cv-dropdown">
+            <a href="cv-qa-ats.pdf" download><i class="fa-solid fa-flask"></i> Testing (ATS)</a>
+            <a href="cv-frontend-ats.pdf" download><i class="fa-solid fa-laptop-code"></i> Frontend (ATS)</a>
+            <a href="cv-qa.pdf" download><i class="fa-regular fa-file-lines"></i> Testing</a>
+            <a href="cv-frontend.pdf" download><i class="fa-regular fa-file-lines"></i> Frontend</a>
           </div>
+        </div>
+        <a href="https://www.linkedin.com/in/hevieri/" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-linkedin-in"></i> linkedin</a>
+        <a href="https://github.com/hevieri" target="_blank" class="btn btn--ghost"><i class="fa-brands fa-github"></i> github</a>
+      </div>
+    </section>
 
-          <div class="cv-dropdown">
-            <button class="btn-cv" onclick="toggleCVDropdown(event)">
-              Descargar CV <i class="fa-solid fa-chevron-down" id="cv-arrow"></i>
-            </button>
-            <div class="cv-dropdown-menu" id="cv-dropdown-menu">
-              <a href="cv-qa.pdf" download>
-                <i class="fa-solid fa-flask"></i> Testing CV
-              </a>
-              <a href="cv-frontend.pdf" download>
-                <i class="fa-solid fa-laptop-code"></i> Frontend CV
-              </a>
-              <a href="cv-qa-ats.pdf" download>
-                <i class="fa-regular fa-file-lines"></i> Testing (ATS)
-              </a>
-              <a href="cv-frontend-ats.pdf" download>
-                <i class="fa-regular fa-file-lines"></i> Frontend (ATS)
-              </a>
+    <section class="section" id="stack">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2>Stack</h2>
+      </div>
+      <div class="stack__grid">
+        <div class="card">
+          <div class="card__head"><i class="fa-solid fa-flask" style="color:var(--violet)"></i> <span>QA</span></div>
+          <div class="stack__list" id="qa-render"></div>
+        </div>
+        <div class="card">
+          <div class="card__head"><i class="fa-solid fa-laptop-code" style="color:var(--blue)"></i> <span>Frontend</span></div>
+          <div class="stack__list" id="front-render"></div>
+        </div>
+        <div class="card">
+          <div class="card__head"><i class="fa-solid fa-server" style="color:var(--amber)"></i> <span>Back & Tools</span></div>
+          <div class="stack__list" id="back-render"></div>
+        </div>
+        <div class="card card--full">
+          <div class="card__head"><i class="fa-solid fa-arrows-rotate" style="color:var(--green)"></i> <span>Agile</span></div>
+          <div class="stack__tags" id="agile-render"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="exp">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2>Experiencia</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-code"></i>
+              <div><h3>No Country</h3><span class="tl__role">Frontend Developer · React & Tailwind</span></div>
             </div>
+            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Reuniones</span><span>Trabajo en Equipo</span></div>
+            <p>Frontend en equipo con React y Tailwind, participando en reuniones de coordinación y entregas iterativas.</p>
           </div>
         </div>
-
-        <div class="hero__side floating-anim">
-          <p class="side-label">Proyectos Destacados</p>
-          <div id="mini-projects-list"></div>
-        </div>
-      </section>
-
-      <!-- SOBRE MI -->
-      <section class="accordion glass-panel">
-        <button
-          class="accordion-header"
-          onclick="toggleAccordion('about-body', 'about-arrow')"
-        >
-          <h2 class="accordion-title">
-            <i class="fa-solid fa-chevron-right arrow" id="about-arrow"></i>
-            SOBRE MI
-          </h2>
-        </button>
-        <div class="accordion-body" id="about-body">
-          <div class="accordion-inner">
-            <section class="about-section glass-panel">
-              <p>
-                QA Tester y desarrolladora front‑end. Tengo la base para
-                desenvolverme sola, y cuando algo se complica o hay que
-                ir más rápido, la IA me da una mano. Siempre estoy
-                curioseando tecnologías nuevas.
-              </p>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <!-- STACK -->
-      <section class="stack-section glass-panel">
-        <div class="agile-wrapper">
-          <h3 class="stack-header">Metodologías Ágiles</h3>
-          <div class="agile-list" id="agile-render"></div>
-        </div>
-
-        <div class="stack-grid">
-          <div class="stack-col" data-category="qa">
-            <h3 class="stack-header">Quality Assurance</h3>
-            <div class="stack-list" id="qa-render"></div>
-          </div>
-          <div class="stack-col" data-category="front">
-            <h3 class="stack-header">Front-End Dev</h3>
-            <div class="stack-list" id="front-render"></div>
-          </div>
-          <div class="stack-col" data-category="back">
-            <h3 class="stack-header">Back-End & Tools</h3>
-            <div class="stack-list" id="back-render"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- EXPERIENCIA -->
-      <section class="accordion glass-panel">
-        <button
-          class="accordion-header"
-          onclick="toggleAccordion('exp-body', 'exp-arrow')"
-        >
-          <h2 class="accordion-title">
-            <i class="fa-solid fa-chevron-right arrow" id="exp-arrow"></i>
-            EXPERIENCIA
-          </h2>
-        </button>
-        <div class="accordion-body" id="exp-body">
-          <div class="accordion-inner">
-            <div class="experience-grid">
-              <div class="experience-card">
-                <h4>
-                  <i class="fa-solid fa-laptop-code"></i> ElRincónDelFriki.net
-                </h4>
-                <div class="tech-tags">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">SEO</span>
-                  <span class="tag">Google Ads</span>
-                  <span class="tag">HTML / CSS</span>
-                </div>
-                <p>
-                  Sitio en WordPress donde subía contenido constantemente y
-                  administraba todo: SEO, monetización con publicidad de Google,
-                  imágenes, mantenimiento y actualizaciones diarias.
-                </p>
-              </div>
-
-              <div class="experience-card">
-                <h4><i class="fa-solid fa-users"></i> Adopta un Junior</h4>
-                <div class="tech-tags">
-                  <span class="tag">QA Testing</span>
-                  <span class="tag">Pruebas Funcionales</span>
-                  <span class="tag">Team Collaboration</span>
-                </div>
-                <p>
-                  Ejercí el rol de QA Tester dentro de equipos organizados por
-                  áreas, participando en reuniones de coordinación y ciclos de
-                  feedback. Colaboré con desarrolladores y diseñadores para
-                  asegurar la calidad del software en proyectos que simulaban un
-                  entorno laboral real.
-                </p>
-              </div>
-
-              <div class="experience-card">
-                <h4><i class="fa-solid fa-bug"></i> uTest</h4>
-                <div class="tech-tags">
-                  <span class="tag">Web Testing</span>
-                  <span class="tag">Mobile Testing</span>
-                  <span class="tag">Bug Reports</span>
-                </div>
-                <p>
-                  Mi paso por uTest me permitió enfrentar escenarios auténticos
-                  de testing Web y Mobile, adquiriendo disciplina, precisión y
-                  capacidad de adaptación en distintos proyectos y contextos.
-                </p>
-              </div>
-
-              <div class="experience-card">
-                <h4>
-                  <i class="fa-solid fa-lightbulb"></i> Proyectos Autodidactas
-                </h4>
-                <div class="tech-tags">
-                  <span class="tag">Frontend</span>
-                  <span class="tag">Backend</span>
-                  <span class="tag">Base de datos</span>
-                  <span class="tag">Testing</span>
-                  <span class="tag">Frameworks</span>
-                  <span class="tag">Librerias</span>
-                  <span class="tag">APIs</span>
-                </div>
-                <p>
-                  Suelo llevar adelante proyectos autodidactas para seguir
-                  aprendiendo, experimentar nuevas herramientas y perfeccionar
-                  mis habilidades en QA y front‑end.
-                </p>
-              </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-laptop-code"></i>
+              <div><h3>Talently Lab</h3><span class="tl__role">Frontend Developer · React</span></div>
             </div>
+            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Trabajo en Equipo</span></div>
+            <p>Desarrollo frontend con React y Tailwind en equipo, con reuniones de coordinación y revisiones de código.</p>
           </div>
         </div>
-      </section>
-
-      <!-- FORMACIÓN -->
-      <section class="accordion glass-panel">
-        <button
-          class="accordion-header"
-          onclick="toggleAccordion('edu-body', 'edu-arrow')"
-        >
-          <h2 class="accordion-title">
-            <i class="fa-solid fa-chevron-right arrow" id="edu-arrow"></i>
-            FORMACIÓN Y CERTIFICACIONES
-          </h2>
-        </button>
-        <div class="accordion-body" id="edu-body">
-          <div class="accordion-inner">
-            <div class="formacion-columns">
-
-              <!-- Testing / QA -->
-              <div class="formacion-subsection">
-                <h3 class="formacion-subheader" data-category="qa">
-                  <i class="fa-solid fa-flask"></i> Testing / QA
-                </h3>
-
-                <div class="edu-item" data-category="qa">
-                  <span class="edu-tag">Carrera</span>
-                  <h4>Carrera QA Automation Testing</h4>
-                  <p>
-                    Cursos avanzados en metodologías de testing y herramientas
-                    de automatización.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="qa">
-                  <span class="edu-tag">Bootcamp</span>
-                  <h4>Testing QA</h4>
-                  <p>
-                    Formación intensiva en testing manual a través de Talento
-                    Tech, enfocada en la detección de errores, documentación
-                    de casos de prueba y aseguramiento de calidad en entornos
-                    reales.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="qa">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Automatización con Selenium</h4>
-                  <p>
-                    Automatización de pruebas funcionales en aplicaciones web
-                    con Selenium WebDriver, formando parte del programa Talento
-                    Tech.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="qa">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Pruebas de API con Postman</h4>
-                  <p>
-                    Testing de servicios REST con Postman, creación de
-                    colecciones, variables de entorno y aserciones dinámicas.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="qa">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Pruebas de Rendimiento</h4>
-                  <p>
-                    Identificación de cuellos de botella, estrés y carga en
-                    aplicaciones web con herramientas open-source.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="qa">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Gestión de Casos de Prueba</h4>
-                  <p>
-                    Diseño, documentación y trazabilidad de casos de prueba
-                    usando TestRail y buenas prácticas ISTQB.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="qa">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Metodologías Ágiles (Scrum)</h4>
-                  <p>
-                    Fundamentos de Scrum, roles, ceremonias y aplicación del
-                    marco ágil en equipos de desarrollo y testing.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Desarrollo -->
-              <div class="formacion-subsection">
-                <h3 class="formacion-subheader" data-category="front">
-                  <i class="fa-solid fa-laptop-code"></i> Desarrollo
-                </h3>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Tecnicatura</span>
-                  <h4>Diseño Gráfico Digital</h4>
-                  <p>
-                    Formación integral que combinó UX/UI, marketing digital y
-                    herramientas prácticas como Figma, HTML, CSS, jQuery,
-                    Bootstrap, JavaScript, PHP y SQL, aportando una base sólida
-                    para el diseño y desarrollo de interfaces modernas.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>React.js</h4>
-                  <p>
-                    Componentes funcionales, hooks, manejo de estado, routing y
-                    consumo de APIs en aplicaciones React.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>JavaScript Intermedio</h4>
-                  <p>
-                    Programación orientada a objetos, closures, promesas,
-                    asincronía y manipulación avanzada del DOM.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>JavaScript Básico</h4>
-                  <p>
-                    Fundamentos de JavaScript: variables, funciones, DOM,
-                    eventos y lógica de programación, cursado en Educación IT.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>PHP y SQL</h4>
-                  <p>
-                    Desarrollo back-end con PHP y bases de datos SQL:
-                    consultas, CRUD, conexión a bases de datos y creación de
-                    aplicaciones dinámicas.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>SQL</h4>
-                  <p>
-                    Consultas avanzadas, joins, subconsultas, índices y
-                    optimización de bases de datos relacionales.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Sass y CSS Moderno</h4>
-                  <p>
-                    Preprocesadores, Grid, Flexbox, animaciones CSS,
-                    arquitectura de estilos y diseño responsivo avanzado.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Diseño UX/UI con Figma</h4>
-                  <p>
-                    Prototipado, sistemas de diseño, componentes reutilizables y
-                    colaboración en equipo usando Figma.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Desarrollo Front-End</h4>
-                  <p>
-                    Formación práctica en HTML, CSS, JavaScript y Bootstrap,
-                    enfocada en la construcción de interfaces modernas y
-                    responsivas.
-                  </p>
-                </div>
-
-                <div class="edu-item" data-category="front">
-                  <span class="edu-tag">Curso</span>
-                  <h4>Git & GitHub Avanzado</h4>
-                  <p>
-                    Ramas, merge, resolución de conflictos, pull requests y
-                    flujos de trabajo colaborativos con Git.
-                  </p>
-                </div>
-              </div>
-
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-flask"></i>
+              <div><h3>Talently Lab</h3><span class="tl__role">QA Tester · Manual Testing</span></div>
             </div>
+            <div class="tl__tags"><span>Testing Manual</span><span>Postman</span><span>Bug Reports</span></div>
+            <p>Pruebas manuales funcionales, reporte de bugs y testing de APIs con Postman en equipo.</p>
           </div>
         </div>
-      </section>
-    </main>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-users"></i>
+              <div><h3>Adopta un Junior</h3><span class="tl__role">QA Tester · Equipo colaborativo</span></div>
+            </div>
+            <div class="tl__tags"><span>QA Testing</span><span>Pruebas Funcionales</span></div>
+            <p>QA Tester en equipos multidisciplinarios con reuniones de coordinación y ciclos de feedback.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-bug"></i>
+              <div><h3>uTest</h3><span class="tl__role">Web & Mobile Testing</span></div>
+            </div>
+            <div class="tl__tags"><span>Web Testing</span><span>Mobile Testing</span><span>Bug Reports</span></div>
+            <p>Testing funcional en escenarios reales Web y Mobile, con reportes de bugs precisos.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-lightbulb"></i>
+              <div><h3>Proyectos Autodidactas</h3><span class="tl__role">Frontend · Backend · APIs</span></div>
+            </div>
+            <div class="tl__tags"><span>Frontend</span><span>Backend</span><span>Testing</span></div>
+            <p>Proyectos personales para aprender nuevas tecnologías y afinar habilidades.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-laptop-code"></i>
+              <div><h3>ElRincónDelFriki.net</h3><span class="tl__role">WordPress · Gestión integral</span></div>
+            </div>
+            <div class="tl__tags"><span>WordPress</span><span>SEO</span><span>Google Ads</span></div>
+            <p>Gestión integral del sitio: contenido, SEO, monetización con Google Ads y mantenimiento diario.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer class="footer">
-      <p>
-        <span class="dot">•</span>Este sitio web fue creado por Erika
-        Helfenstern <span class="dot">•</span> Tester & Developer 2026<span
-          class="dot"
-          >•</span
-        >
-      </p>
-    </footer>
+    <section class="section" id="edu">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2>Formación</h2>
+      </div>
+      <div class="edu__grid">
+        <div>
+          <h3 class="edu__head" style="color:var(--violet)"><i class="fa-solid fa-flask"></i> Testing / QA</h3>
+          <div id="edu-qa-render"></div>
+        </div>
+        <div>
+          <h3 class="edu__head" style="color:var(--blue)"><i class="fa-solid fa-laptop-code"></i> Desarrollo</h3>
+          <div id="edu-front-render"></div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="section" id="projects">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2>Proyectos</h2>
+      </div>
+      <div class="projects__grid">
+        <div class="card project-card" data-content="0"></div>
+        <div class="card project-card" data-content="1"></div>
+        <div class="card project-card" data-content="2"></div>
+        <div class="card project-card" data-content="3"></div>
+        <div class="card project-card" data-content="4"></div>
+        <div class="card project-card" data-content="5"></div>
+        <div class="card project-card" data-content="6"></div>
+        <div class="card project-card" data-content="7"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="mono">hevieri · 2026</span>
+    <div class="footer__links">
+      <a href="mailto:hevieri.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      <a href="https://github.com/hevieri" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/hevieri/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
