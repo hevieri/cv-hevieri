@@ -82,11 +82,12 @@ const templates = {
 
 document.addEventListener("DOMContentLoaded", () => {
   render(DATA.stack.qa, "qa-render", templates.stackItem);
-  render(DATA.stack.front, "front-render", templates.stackItem);
-  render(DATA.stack.back, "back-render", templates.stackItem);
-  render(DATA.stack.agile, "agile-render", templates.pill);
-  render(DATA.education.qa, "edu-qa-render", templates.edu);
-  render(DATA.education.front, "edu-front-render", templates.edu);
+  render(DATA.stack.agile, "qa-agile-render", templates.pill);
+  render(DATA.education.qa, "qa-edu-render", templates.edu);
+
+  render(DATA.stack.front, "dev-front-render", templates.stackItem);
+  render(DATA.stack.back, "dev-back-render", templates.stackItem);
+  render(DATA.education.front, "dev-edu-render", templates.edu);
 
   DATA.projects.forEach((p, i) => {
     const el = document.querySelector(`[data-content="${i}"]`);

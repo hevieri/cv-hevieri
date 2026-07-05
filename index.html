@@ -15,9 +15,8 @@
   <nav class="nav">
     <span class="nav__logo">hevieri</span>
     <div class="nav__links">
-      <a href="#stack">stack</a>
-      <a href="#exp">exp</a>
-      <a href="#edu">edu</a>
+      <a href="#qa">qa</a>
+      <a href="#dev">dev</a>
       <a href="#projects">proyectos</a>
     </div>
   </nav>
@@ -54,59 +53,27 @@
       </div>
     </section>
 
-    <section class="section" id="stack">
+    <!-- ── QA TRACK ── -->
+    <section class="section track track--qa" id="qa">
+      <div class="track__bar" style="background:var(--violet)"></div>
       <div class="section__head">
-        <span class="section__num">01</span>
-        <h2>Stack</h2>
+        <span class="section__num" style="color:var(--violet);border-color:var(--violet-soft)">QA</span>
+        <h2>Quality Assurance</h2>
       </div>
-      <div class="stack__grid">
-        <div class="card">
-          <div class="card__head"><i class="fa-solid fa-flask" style="color:var(--violet)"></i> <span>QA</span></div>
+
+      <div class="track__stack">
+        <div class="card card--track">
+          <div class="card__head"><i class="fa-solid fa-flask" style="color:var(--violet)"></i> <span>Herramientas</span></div>
           <div class="stack__list" id="qa-render"></div>
         </div>
-        <div class="card">
-          <div class="card__head"><i class="fa-solid fa-laptop-code" style="color:var(--blue)"></i> <span>Frontend</span></div>
-          <div class="stack__list" id="front-render"></div>
-        </div>
-        <div class="card">
-          <div class="card__head"><i class="fa-solid fa-server" style="color:var(--amber)"></i> <span>Back & Tools</span></div>
-          <div class="stack__list" id="back-render"></div>
-        </div>
-        <div class="card card--full">
-          <div class="card__head"><i class="fa-solid fa-arrows-rotate" style="color:var(--green)"></i> <span>Agile</span></div>
-          <div class="stack__tags" id="agile-render"></div>
+        <div class="card card--track">
+          <div class="card__head"><i class="fa-solid fa-arrows-rotate" style="color:var(--green)"></i> <span>Metodologías</span></div>
+          <div class="stack__tags" id="qa-agile-render"></div>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="exp">
-      <div class="section__head">
-        <span class="section__num">02</span>
-        <h2>Experiencia</h2>
-      </div>
+      <h3 class="track__subtitle">Experiencia</h3>
       <div class="timeline">
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="card tl__card">
-            <div class="tl__top">
-              <i class="fa-solid fa-code"></i>
-              <div><h3>No Country</h3><span class="tl__role">Frontend Developer · React & Tailwind</span></div>
-            </div>
-            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Reuniones</span><span>Trabajo en Equipo</span></div>
-            <p>Frontend en equipo con React y Tailwind, participando en reuniones de coordinación y entregas iterativas.</p>
-          </div>
-        </div>
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="card tl__card">
-            <div class="tl__top">
-              <i class="fa-solid fa-laptop-code"></i>
-              <div><h3>Talently Lab</h3><span class="tl__role">Frontend Developer · React</span></div>
-            </div>
-            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Trabajo en Equipo</span></div>
-            <p>Desarrollo frontend con React y Tailwind en equipo, con reuniones de coordinación y revisiones de código.</p>
-          </div>
-        </div>
         <div class="tl__item">
           <div class="tl__dot"></div>
           <div class="card tl__card">
@@ -140,6 +107,55 @@
             <p>Testing funcional en escenarios reales Web y Mobile, con reportes de bugs precisos.</p>
           </div>
         </div>
+      </div>
+
+      <h3 class="track__subtitle">Formación</h3>
+      <div class="track__edu" id="qa-edu-render"></div>
+    </section>
+
+    <!-- ── DEV TRACK ── -->
+    <section class="section track track--dev" id="dev">
+      <div class="track__bar" style="background:var(--blue)"></div>
+      <div class="section__head">
+        <span class="section__num" style="color:var(--blue);border-color:var(--blue-soft)">DEV</span>
+        <h2>Desarrollo Web</h2>
+      </div>
+
+      <div class="track__stack">
+        <div class="card card--track">
+          <div class="card__head"><i class="fa-solid fa-laptop-code" style="color:var(--blue)"></i> <span>Frontend</span></div>
+          <div class="stack__list" id="dev-front-render"></div>
+        </div>
+        <div class="card card--track">
+          <div class="card__head"><i class="fa-solid fa-server" style="color:var(--amber)"></i> <span>Back & Tools</span></div>
+          <div class="stack__list" id="dev-back-render"></div>
+        </div>
+      </div>
+
+      <h3 class="track__subtitle">Experiencia</h3>
+      <div class="timeline">
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-code"></i>
+              <div><h3>No Country</h3><span class="tl__role">Frontend · React & Tailwind</span></div>
+            </div>
+            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Reuniones</span></div>
+            <p>Frontend en equipo con React y Tailwind, reuniones de coordinación y entregas iterativas.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="card tl__card">
+            <div class="tl__top">
+              <i class="fa-solid fa-laptop-code"></i>
+              <div><h3>Talently Lab</h3><span class="tl__role">Frontend · React</span></div>
+            </div>
+            <div class="tl__tags"><span>React</span><span>Tailwind</span><span>Trabajo en Equipo</span></div>
+            <p>Desarrollo frontend con React y Tailwind en equipo, reuniones de coordinación y revisiones de código.</p>
+          </div>
+        </div>
         <div class="tl__item">
           <div class="tl__dot"></div>
           <div class="card tl__card">
@@ -163,25 +179,12 @@
           </div>
         </div>
       </div>
+
+      <h3 class="track__subtitle">Formación</h3>
+      <div class="track__edu" id="dev-edu-render"></div>
     </section>
 
-    <section class="section" id="edu">
-      <div class="section__head">
-        <span class="section__num">03</span>
-        <h2>Formación</h2>
-      </div>
-      <div class="edu__grid">
-        <div>
-          <h3 class="edu__head" style="color:var(--violet)"><i class="fa-solid fa-flask"></i> Testing / QA</h3>
-          <div id="edu-qa-render"></div>
-        </div>
-        <div>
-          <h3 class="edu__head" style="color:var(--blue)"><i class="fa-solid fa-laptop-code"></i> Desarrollo</h3>
-          <div id="edu-front-render"></div>
-        </div>
-      </div>
-    </section>
-
+    <!-- ── PROYECTOS ── -->
     <section class="section" id="projects">
       <div class="section__head">
         <span class="section__num">04</span>

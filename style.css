@@ -115,6 +115,43 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
   letter-spacing:-.3px
 }
 
+/* ── TRACK ── */
+.track {
+  position:relative;
+  padding:0 0 0 1.2rem;
+  border-left:2px solid var(--border)
+}
+
+.track__bar {
+  position:absolute;
+  top:0;
+  left:-2px;
+  width:3px;
+  height:32px;
+  border-radius:0 0 3px 3px
+}
+
+.track .section__head { margin-bottom:1.5rem }
+
+.track__stack {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  margin-bottom:2rem
+}
+
+.track__subtitle {
+  font-size:.8rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--text-second);
+  margin-bottom:1rem
+}
+
+.track__edu { display:grid; gap:.5rem }
+.track__edu .edu__item { margin-bottom:0 }
+
 /* ── CARD ── */
 .card {
   background:var(--card);
@@ -143,6 +180,7 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 .card__head i { font-size:1rem }
 
 .card--full { grid-column:1/-1 }
+.card--track { padding:1.1rem 1.2rem }
 
 /* ── HERO ── */
 .hero {
@@ -318,9 +356,10 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 
 .stack-item i { width:14px; text-align:center; font-size:.8rem }
 
-.stack__grid .card:nth-child(1) .stack-item i { color:var(--violet) }
-.stack__grid .card:nth-child(2) .stack-item i { color:var(--blue) }
-.stack__grid .card:nth-child(3) .stack-item i { color:var(--amber) }
+.track--qa .card:nth-child(1) .stack-item i { color:var(--violet) }
+.track--qa .card:nth-child(2) .stack-item i { color:var(--green) }
+.track--dev .card:nth-child(1) .stack-item i { color:var(--blue) }
+.track--dev .card:nth-child(2) .stack-item i { color:var(--amber) }
 
 .stack__tags { display:flex; flex-wrap:wrap; gap:.4rem }
 
@@ -438,7 +477,8 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 
 .edu__item:hover { border-color:var(--border-hover); background:var(--card-hover) }
 
-.edu__item:nth-child(even) { border-left-color:var(--blue) }
+.track--qa .edu__item { border-left-color:var(--violet) }
+.track--dev .edu__item { border-left-color:var(--blue) }
 
 .edu__tag {
   display:inline-block;
@@ -452,7 +492,8 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
   color:var(--violet)
 }
 
-.edu__item:nth-child(even) .edu__tag { background:var(--blue-soft); color:var(--blue) }
+.track--qa .edu__tag { background:var(--violet-soft); color:var(--violet) }
+.track--dev .edu__tag { background:var(--blue-soft); color:var(--blue) }
 
 .edu__name { font-size:.82rem; font-weight:700; margin-bottom:1px }
 .edu__desc { color:var(--muted); font-size:.72rem }
@@ -514,7 +555,7 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 @media(max-width:800px) {
   .stack__grid { grid-template-columns:1fr }
   .edu__grid { grid-template-columns:1fr }
-
+  .track__stack { grid-template-columns:1fr }
   .footer { flex-direction:column; text-align:center; gap:.5rem }
 }
 
