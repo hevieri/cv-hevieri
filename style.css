@@ -303,6 +303,7 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
   margin-bottom:1.5rem;
   font-family:"JetBrains Mono",monospace
 }
+.hero__badge .tag { margin-left:4px }
 
 .status-dot {
   width:6px;
