@@ -528,8 +528,11 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
   display:flex;align-items:center;justify-content:center;
   background:var(--violet-soft);
   border-radius:6px;
-  flex-shrink:0
+  flex-shrink:0;
+  transition:background .15s
 }
+.tl__top a { text-decoration:none; display:flex }
+.tl__top a:hover i { background:var(--violet); color:#fff }
 
 .tl__top h3 { font-size:.95rem; font-weight:700 }
 .tl__role { font-size:.68rem; color:var(--muted); display:block; margin-top:1px }
