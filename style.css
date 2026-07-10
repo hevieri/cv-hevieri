@@ -303,7 +303,8 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
   margin-bottom:1.5rem;
   font-family:"JetBrains Mono",monospace
 }
-.hero__badge .tag { margin-left:4px }
+.hero__badge .tag { margin-left:4px; text-decoration:none; transition:background .15s, color .15s }
+.hero__badge .tag:hover { background:var(--violet); color:#fff }
 
 .status-dot {
   width:6px;
