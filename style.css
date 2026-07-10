@@ -202,6 +202,7 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
 }
 
 .track-btn--dev:hover { background:var(--blue-soft) }
+.stack__list + .track-btn { margin-top:1rem }
 
 .nav__track {
   color:var(--violet) !important;
@@ -699,8 +700,6 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
   .nav__links:only-child { display:flex; gap:.8rem; font-size:.78rem }
   .hero__actions { flex-direction:column }
   .hero__actions .btn { width:100%; justify-content:center }
-  .hero__tracks { flex-direction:column }
-  .hero__tracks .track-btn { width:100%; justify-content:center }
   .tl__card { padding:1rem }
   .section { margin-bottom:3rem }
   .track-page .hero__actions { flex-direction:row }
