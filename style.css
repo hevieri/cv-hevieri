@@ -271,6 +271,14 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
 
 .card__head i { font-size:1rem }
 
+.card__head--link {
+  text-decoration:none;
+  color:inherit;
+  cursor:pointer;
+  transition:color .15s
+}
+.card__head--link:hover { color:var(--violet) }
+
 .card--full { grid-column:1/-1 }
 
 /* ── HERO ── */
