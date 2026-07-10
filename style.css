@@ -164,6 +164,7 @@ details > summary {
 details > summary::-webkit-details-marker { display:none }
 details > summary::marker { display:none; content:'' }
 details[open] > summary { margin-bottom:0 }
+details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
 
 /* ── TRACK BUTTONS ── */
 .hero__tracks {
