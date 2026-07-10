@@ -202,7 +202,7 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
 }
 
 .track-btn--dev:hover { background:var(--blue-soft) }
-.stack__list + .track-btn { margin-top:1rem }
+.track-btn + .stack__list { margin-top:.8rem }
 
 .nav__track {
   color:var(--violet) !important;
