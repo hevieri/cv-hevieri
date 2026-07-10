@@ -33,6 +33,7 @@ const DATA = {
     qa: [
       { tag: "Carrera", name: "Carrera QA Automation Testing", desc: "Cursos avanzados en metodologías de testing y automatización." },
       { tag: "Bootcamp", name: "Testing QA — Talento Tech", desc: "Formación intensiva en testing manual y casos de prueba." },
+      { tag: "Bootcamp", name: "Testing QA Manual — Technology With Purpose Foundation", desc: "Formación en testing QA manual con enfoque en propósito tecnológico." },
       { tag: "Curso", name: "Automatización con Selenium", desc: "Pruebas automatizadas con Selenium WebDriver." },
       { tag: "Curso", name: "Pruebas de API con Postman", desc: "Testing REST, colecciones y aserciones dinámicas." },
       { tag: "Curso", name: "Pruebas de Rendimiento", desc: "Estrés y carga en aplicaciones web." },
