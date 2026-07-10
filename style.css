@@ -160,7 +160,9 @@ main { max-width:1100px; margin:0 auto; padding:0 1.5rem }
 details > summary {
   list-style:none;
   cursor:pointer;
+  transition:color .15s
 }
+details > summary:hover { color:var(--violet) }
 details > summary::-webkit-details-marker { display:none }
 details > summary::marker { display:none; content:'' }
 details[open] > summary { margin-bottom:0 }
