@@ -45,8 +45,6 @@ const DATA = {
       { tag: "Curso", name: "JavaScript Intermedio", desc: "POO, closures, promesas, asincronía." },
       { tag: "Curso", name: "JavaScript Básico", desc: "Fundamentos: variables, funciones, DOM." },
       { tag: "Curso", name: "PHP y SQL", desc: "Consultas, CRUD y aplicaciones dinámicas." },
-      { tag: "Curso", name: "SQL", desc: "Joins, subconsultas e índices." },
-      { tag: "Curso", name: "Diseño UX/UI con Figma", desc: "Prototipado y componentes reutilizables." },
       { tag: "Curso", name: "Desarrollo Front-End", desc: "HTML, CSS, JS, Bootstrap, responsivo." },
     ],
   },
