@@ -531,8 +531,18 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
   flex-shrink:0;
   transition:background .15s
 }
-.tl__top a { text-decoration:none; display:flex }
-.tl__top a:hover i { background:var(--violet); color:#fff }
+.tl__top a {
+  text-decoration:none;
+  display:flex;align-items:center;justify-content:center;
+  width:28px;height:28px;
+  background:var(--violet-soft);
+  border-radius:6px;
+  flex-shrink:0;
+  transition:background .15s
+}
+.tl__top a i { font-size:1rem; color:var(--violet); width:auto;height:auto; background:none }
+.tl__top a:hover { background:var(--violet) }
+.tl__top a:hover i { color:#fff }
 
 .tl__top h3 { font-size:.95rem; font-weight:700 }
 .tl__role { font-size:.68rem; color:var(--muted); display:block; margin-top:1px }
