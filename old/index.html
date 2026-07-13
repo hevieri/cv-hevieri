@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erika Helfenstern | Developer & QA Tester</title>
+  <meta name="description" content="Portfolio profesional de Erika Helfenstern — Desarrollo Web y Testing QA" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <span class="navbar__logo">hevieri</span>
+      <div class="navbar__links">
+        <a href="#stack">Stack</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#education">Formación</a>
+        <a href="#projects">Proyectos</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__main">
+          <span class="hero__badge">Developer & QA Tester</span>
+          <h1 class="hero__name">
+            Erika<br />
+            <span class="hero__name--gradient">Helfenstern</span>
+          </h1>
+          <p class="hero__desc">
+            <span id="typing-text"></span><span class="typing-cursor" id="typing-cursor"></span>
+          </p>
+          <div class="hero__actions">
+            <div class="cv-group">
+              <button class="btn btn--primary" onclick="toggleCVDropdown(event)">
+                <i class="fa-solid fa-download"></i> Descargar CV
+                <i class="fa-solid fa-chevron-down btn__arrow" id="cv-arrow"></i>
+              </button>
+              <div class="cv-dropdown" id="cv-dropdown">
+                <a href="cv-qa-ats.pdf" download><i class="fa-solid fa-flask"></i> Testing CV (ATS)</a>
+                <a href="cv-frontend-ats.pdf" download><i class="fa-solid fa-laptop-code"></i> Frontend CV (ATS)</a>
+                <a href="cv-qa.pdf" download><i class="fa-regular fa-file-lines"></i> Testing CV (Diseño)</a>
+                <a href="cv-frontend.pdf" download><i class="fa-regular fa-file-lines"></i> Frontend CV (Diseño)</a>
+              </div>
+            </div>
+            <a href="#stack" class="btn btn--ghost">
+              <i class="fa-solid fa-arrow-down"></i> Conocé más
+            </a>
+          </div>
+          <div class="hero__socials">
+            <a href="https://www.linkedin.com/in/hevieri/" target="_blank" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/hevieri" target="_blank" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://wa.me/1162178105" target="_blank" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:hevieri.dev@gmail.com" aria-label="Email">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__code-snip">
+            <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</div>
+            <div class="code-line code-indent"><span class="code-prop">name</span>: <span class="code-string">"Erika"</span>,</div>
+            <div class="code-line code-indent"><span class="code-prop">role</span>: <span class="code-string">"QA / Frontend"</span>,</div>
+            <div class="code-line code-indent"><span class="code-prop">superpower</span>: <span class="code-string">"never stop learning"</span></div>
+            <div class="code-line">};</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-block reveal" id="about">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">Sobre Mí</h2>
+      </div>
+      <div class="about__content">
+        <p class="reveal reveal-delay-1">
+          <span class="text-gradient">QA Tester</span> y desarrolladora
+          <span class="text-gradient">front&#8209;end</span>. Tengo la base para
+          desenvolverme sola, y cuando algo se complica o hay que ir más rápido,
+          la IA me da una mano. Siempre estoy curioseando tecnologías nuevas.
+        </p>
+        <div class="about__stats reveal reveal-delay-2">
+          <div class="stat">
+            <span class="stat__num">4+</span>
+            <span class="stat__label">Proyectos</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">2</span>
+            <span class="stat__label">Áreas</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">∞</span>
+            <span class="stat__label">Curiosidad</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section-block reveal" id="stack">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Stack Tecnológico</h2>
+      </div>
+
+      <div class="skills__agile reveal reveal-delay-1">
+        <div class="skill-category">
+          <div class="skill-category__header">
+            <i class="fa-solid fa-arrows-rotate" style="color: var(--green)"></i>
+            <h3>Metodologías Ágiles</h3>
+          </div>
+          <div class="skill-tags" id="agile-render"></div>
+        </div>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-category__header">
+            <i class="fa-solid fa-flask" style="color: var(--violet)"></i>
+            <h3>Quality Assurance</h3>
+          </div>
+          <div class="skill-list" id="qa-render"></div>
+        </div>
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-category__header">
+            <i class="fa-solid fa-laptop-code" style="color: var(--blue)"></i>
+            <h3>Front-End Dev</h3>
+          </div>
+          <div class="skill-list" id="front-render"></div>
+        </div>
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-category__header">
+            <i class="fa-solid fa-server" style="color: var(--amber)"></i>
+            <h3>Back-End & Tools</h3>
+          </div>
+          <div class="skill-list" id="back-render"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-block reveal" id="experience">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Experiencia</h2>
+      </div>
+      <div class="timeline" id="exp-render">
+        <div class="timeline__item reveal reveal-delay-1">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <i class="fa-solid fa-laptop-code"></i>
+              <div>
+                <h3>ElRincónDelFriki.net</h3>
+                <span class="timeline__role">WordPress · Gestión integral</span>
+              </div>
+            </div>
+            <div class="timeline__tags">
+              <span>WordPress</span>
+              <span>SEO</span>
+              <span>Google Ads</span>
+              <span>HTML / CSS</span>
+            </div>
+            <p>Sitio en WordPress donde subía contenido constantemente y administraba todo: SEO, monetización con publicidad de Google, imágenes, mantenimiento y actualizaciones diarias.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal reveal-delay-2">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <i class="fa-solid fa-users"></i>
+              <div>
+                <h3>Adopta un Junior</h3>
+                <span class="timeline__role">QA Tester · Equipo colaborativo</span>
+              </div>
+            </div>
+            <div class="timeline__tags">
+              <span>QA Testing</span>
+              <span>Pruebas Funcionales</span>
+              <span>Colaboración</span>
+            </div>
+            <p>Ejercí el rol de QA Tester dentro de equipos organizados por áreas, participando en reuniones de coordinación y ciclos de feedback. Colaboré con desarrolladores y diseñadores para asegurar la calidad del software en proyectos que simulaban un entorno laboral real.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal reveal-delay-3">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <i class="fa-solid fa-bug"></i>
+              <div>
+                <h3>uTest</h3>
+                <span class="timeline__role">Web & Mobile Testing</span>
+              </div>
+            </div>
+            <div class="timeline__tags">
+              <span>Web Testing</span>
+              <span>Mobile Testing</span>
+              <span>Bug Reports</span>
+            </div>
+            <p>Mi paso por uTest me permitió enfrentar escenarios auténticos de testing Web y Mobile, adquiriendo disciplina, precisión y capacidad de adaptación en distintos proyectos y contextos.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal reveal-delay-4">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__card-header">
+              <i class="fa-solid fa-lightbulb"></i>
+              <div>
+                <h3>Proyectos Autodidactas</h3>
+                <span class="timeline__role">Frontend · Backend · APIs</span>
+              </div>
+            </div>
+            <div class="timeline__tags">
+              <span>Frontend</span>
+              <span>Backend</span>
+              <span>Testing</span>
+              <span>APIs</span>
+            </div>
+            <p>Suelo llevar adelante proyectos autodidactas para seguir aprendiendo, experimentar nuevas herramientas y perfeccionar mis habilidades en QA y front-end.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education section-block reveal" id="education">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Formación</h2>
+      </div>
+      <div class="edu__grid">
+        <div class="edu__col reveal reveal-delay-1">
+          <h3 class="edu__col-title" style="color: var(--violet); border-color: var(--violet);">
+            <i class="fa-solid fa-flask"></i> Testing / QA
+          </h3>
+          <div id="edu-qa-render"></div>
+        </div>
+        <div class="edu__col reveal reveal-delay-2">
+          <h3 class="edu__col-title" style="color: var(--blue); border-color: var(--blue);">
+            <i class="fa-solid fa-laptop-code"></i> Desarrollo
+          </h3>
+          <div id="edu-front-render"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section-block reveal" id="projects">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">Proyectos</h2>
+      </div>
+      <div class="projects__grid">
+        <div class="project-card tilt-card reveal reveal-delay-1">
+          <div class="tilt-card__glow"></div>
+          <div class="tilt-card__content" data-tilt-content="0"></div>
+        </div>
+        <div class="project-card tilt-card reveal reveal-delay-2">
+          <div class="tilt-card__glow"></div>
+          <div class="tilt-card__content" data-tilt-content="1"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__logo">hevieri</span>
+      <p>Erika Helfenstern · Tester & Developer · 2026</p>
+      <div class="footer__socials">
+        <a href="https://www.linkedin.com/in/hevieri/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/hevieri" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:hevieri.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
