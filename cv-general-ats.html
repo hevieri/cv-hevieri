@@ -4,239 +4,344 @@
   <meta charset="UTF-8">
   <title>Erika Helfenstern - QA Tester & Frontend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "Inter", "Segoe UI", Arial, sans-serif;
-      font-size: 10px;
-      line-height: 1.25;
+      font-size: 16px;
+      line-height: 1.4;
       color: #1e1e2e;
       background: #fff;
     }
     @page { margin: 0; size: A4; }
     .page {
       width: 210mm;
-      min-height: 297mm;
-      padding: 8mm 12mm;
+      height: 297mm;
+      padding: 14mm 16mm;
       display: flex;
       flex-direction: column;
-      gap: 2px;
     }
 
-    h1 { font-size: 22px; font-weight: 800; margin-bottom: 1px; }
-    h1 span { color: #7c3aed; }
+    /* ── Header ── */
+    .header { margin-bottom: 4px; }
     .badge {
       display: inline-block;
       background: #7c3aed;
       color: #fff;
-      font-size: 9px;
+      font-size: 8px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       padding: 3px 12px;
       border-radius: 10px;
       margin-bottom: 4px;
     }
+    h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; color: #111; line-height: 1.1; }
+    h1 span { color: #7c3aed; }
+    .subtitle {
+      font-size: 11px;
+      font-weight: 500;
+      color: #888;
+      margin-top: 2px;
+    }
     .contact-line {
-      font-size: 10px;
-      color: #555;
-      margin-bottom: 4px;
       display: flex;
       flex-wrap: wrap;
-      gap: 4px 16px;
+      gap: 3px 14px;
+      margin-top: 6px;
+      font-size: 9px;
+      color: #555;
     }
     .contact-line a { color: #555; text-decoration: none; }
-    .contact-line i { color: #7c3aed; width: 14px; }
+    .contact-line i { color: #7c3aed; width: 12px; font-size: 9px; }
 
-    .divider { border-top: 1.5px solid #e5e5e5; margin: 1px 0; }
+    .divider { height: 1px; background: #e5e5e5; margin: 8px 0; }
 
-    .summary {
-      font-size: 10px;
-      color: #444;
-      line-height: 1.35;
-      margin-bottom: 2px;
+    /* ── Layout ── */
+    .main-layout {
+      display: flex;
+      flex: 1;
+      gap: 16px;
+    }
+    .sidebar {
+      width: 165px;
+      min-width: 165px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
+    /* ── Sidebar ── */
+    .stitle {
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #7c3aed;
+      margin-bottom: 4px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #ede9fe;
+    }
+    .skill-group-label {
+      font-size: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #94a3b8;
+      margin-top: 5px;
+      margin-bottom: 2px;
+    }
+    .skill-group-label:first-child { margin-top: 0; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 2px 8px; }
+    .skill-list span { font-size: 8.5px; color: #444; }
+
+    /* ── Content ── */
     .sec-title {
       font-size: 9px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       color: #7c3aed;
-      margin: 3px 0 1px;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 1px;
-    }
-
-    .skill-list {
+      margin-bottom: 5px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #ede9fe;
       display: flex;
-      flex-wrap: wrap;
-      gap: 2px 12px;
-      margin-bottom: 2px;
+      align-items: center;
+      gap: 8px;
     }
-    .skill-list span { font-size: 10px; color: #333; }
-    .skill-group-label {
-      font-size: 8px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #94a3b8;
-      margin-top: 1px;
+    .sec-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #ede9fe;
     }
 
-    .exp-item { margin-bottom: 2px; }
-    .exp-item h4 { font-size: 11px; font-weight: 700; }
-    .exp-meta { font-size: 8px; color: #999; }
-    .exp-item p { font-size: 9.5px; color: #444; line-height: 1.25; }
+    .exp-list { display: flex; flex-direction: column; gap: 5px; }
+    .exp-item { }
+    .exp-header { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .exp-header h4 { font-size: 10px; font-weight: 700; color: #1a1a2e; }
+    .exp-meta {
+      font-size: 7.5px;
+      font-weight: 500;
+      color: #999;
+      background: #f8f7ff;
+      padding: 1px 6px;
+      border-radius: 8px;
+    }
+    .exp-item p { font-size: 9px; color: #555; line-height: 1.3; margin-top: 1px; }
 
-    .edu-item { margin-bottom: 1px; }
+    .edu-list { display: flex; flex-direction: column; gap: 3px; }
+    .edu-item { display: flex; align-items: baseline; gap: 5px; flex-wrap: wrap; }
     .edu-tag {
-      font-size: 8px;
+      font-size: 6.5px;
       font-weight: 700;
       text-transform: uppercase;
       background: #f5f3ff;
       color: #7c3aed;
-      padding: 1px 6px;
+      padding: 1px 5px;
       border-radius: 3px;
-      display: inline-block;
-      margin-right: 4px;
+      flex-shrink: 0;
     }
-    .edu-item h5 { font-size: 11px; font-weight: 600; display: inline; }
-    .edu-item p { font-size: 11px; color: #555; display: inline; }
+    .edu-item h5 { font-size: 9px; font-weight: 600; color: #1a1a2e; }
+    .edu-item p { font-size: 8.5px; color: #888; }
+
+    .summary {
+      font-size: 9px;
+      color: #555;
+      line-height: 1.35;
+    }
   </style>
 </head>
 <body>
   <div class="page">
-    <span class="badge">QA Tester & Frontend Developer</span>
-    <h1>Erika <span>Helfenstern</span></h1>
-    <div class="contact-line">
-      <span><i class="fa-regular fa-location-dot"></i> CABA, Argentina</span>
-      <a href="https://wa.me/541162178105"><i class="fa-brands fa-whatsapp"></i> +54 11 6217-8105</a>
-      <a href="mailto:hevieri.dev@gmail.com"><i class="fa-regular fa-envelope"></i> hevieri.dev@gmail.com</a>
-      <a href="https://www.linkedin.com/in/hevieri/"><i class="fa-brands fa-linkedin-in"></i> /in/hevieri</a>
-      <a href="https://github.com/hevieri"><i class="fa-brands fa-github"></i> github/hevieri</a>
+    <div class="header">
+      <span class="badge">QA Tester & Frontend Developer</span>
+      <h1>Erika <span>Helfenstern</span></h1>
+      <div class="subtitle">Testing QA & Desarrollo Frontend</div>
+      <div class="contact-line">
+        <span><i class="fa-solid fa-location-dot"></i>CABA, Argentina</span>
+        <a href="https://wa.me/541162178105"><i class="fa-brands fa-whatsapp"></i>+54 11 6217-8105</a>
+        <a href="mailto:hevieri.dev@gmail.com"><i class="fa-solid fa-envelope"></i>hevieri.dev@gmail.com</a>
+        <a href="https://www.linkedin.com/in/hevieri/"><i class="fa-brands fa-linkedin"></i>/in/hevieri</a>
+        <a href="https://github.com/hevieri"><i class="fa-brands fa-github"></i>github/hevieri</a>
+      </div>
     </div>
 
     <div class="divider"></div>
 
     <p class="summary">Profesional con enfoque dual en testing QA y desarrollo frontend. Experiencia en pruebas manuales y automatizadas, WordPress, React y maquetación web. Combino visión estética con código limpio y calidad de software. Me apoyo en IA para optimizar procesos y resolver problemas complejos.</p>
 
-    <div class="sec-title">Skills</div>
-    <div class="skill-group-label">Testing Manual</div>
-    <div class="skill-list">
-      <span>Manual Testing</span> <span>Mobile Testing</span> <span>Pruebas Funcionales</span> <span>Gestión de Casos</span>
-    </div>
-    <div class="skill-group-label">Automatización</div>
-    <div class="skill-list">
-      <span>QA Automation</span> <span>Selenium</span> <span>Python</span> <span>Pytest</span> <span>BDD (Behave)</span>
-    </div>
-    <div class="skill-group-label">API & Rendimiento</div>
-    <div class="skill-list">
-      <span>Postman</span> <span>Pruebas de API</span> <span>Pruebas de Rendimiento</span>
-    </div>
-    <div class="skill-group-label">Frontend</div>
-    <div class="skill-list">
-      <span>HTML / CSS</span> <span>React / JS</span> <span>Tailwind</span> <span>Bootstrap</span> <span>jQuery</span> <span>Sass</span>
-    </div>
-    <div class="skill-group-label">Backend & DB</div>
-    <div class="skill-list">
-      <span>Firebase</span> <span>PHP / SQL</span> <span>WordPress</span>
-    </div>
-    <div class="skill-group-label">Herramientas</div>
-    <div class="skill-list">
-      <span>Git / GitHub</span> <span>Figma</span>
-    </div>
-    <div class="skill-group-label">Metodologías</div>
-    <div class="skill-list">
-      <span>Scrum</span> <span>Kanban</span> <span>Jira</span> <span>Trello</span> <span>ClickUp</span>
-    </div>
-    <div class="skill-group-label">Idioma</div>
-    <div class="skill-list">
-      <span>Español Nativo</span> <span>Inglés Intermedio</span>
-    </div>
+    <div class="divider"></div>
 
-    <div class="sec-title">Experiencia</div>
+    <div class="main-layout">
+      <div class="sidebar">
+        <div>
+          <div class="stitle">Skills</div>
+          <div class="skill-group-label">Testing Manual</div>
+          <div class="skill-list">
+            <span>Manual Testing</span> <span>Mobile Testing</span> <span>Funcionales</span> <span>Casos de Prueba</span>
+          </div>
+          <div class="skill-group-label">Automatización</div>
+          <div class="skill-list">
+            <span>Selenium</span> <span>Python</span> <span>Pytest</span> <span>BDD</span>
+          </div>
+          <div class="skill-group-label">API & Rendimiento</div>
+          <div class="skill-list">
+            <span>Postman</span> <span>APIs REST</span> <span>Rendimiento</span>
+          </div>
+          <div class="skill-group-label">Frontend</div>
+          <div class="skill-list">
+            <span>HTML/CSS</span> <span>React</span> <span>JavaScript</span> <span>Tailwind</span> <span>Bootstrap</span> <span>Sass</span>
+          </div>
+          <div class="skill-group-label">Backend & DB</div>
+          <div class="skill-list">
+            <span>Firebase</span> <span>PHP</span> <span>SQL</span> <span>WordPress</span>
+          </div>
+          <div class="skill-group-label">Herramientas</div>
+          <div class="skill-list">
+            <span>Git</span> <span>Figma</span> <span>Jira</span> <span>Trello</span>
+          </div>
+          <div class="skill-group-label">Metodologías</div>
+          <div class="skill-list">
+            <span>Scrum</span> <span>Kanban</span>
+          </div>
+          <div class="skill-group-label">Idiomas</div>
+          <div class="skill-list">
+            <span>Español Nativo</span> <span>Inglés Intermedio</span>
+          </div>
+        </div>
+      </div>
 
-    <div class="exp-item">
-      <h4>BiT — Panel de Datos Públicos</h4>
-      <div class="exp-meta">NoCountry Hackathon · Full Stack</div>
-      <p>App de decisión con IA para gestores públicos. Mapa 2D/3D, chat con RAG y reportes PDF.</p>
+      <div class="content">
+        <div>
+          <div class="sec-title">Experiencia</div>
+          <div class="exp-list">
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>BiT — Panel de Datos Públicos</h4>
+                <span class="exp-meta">NoCountry Hackathon · Full Stack</span>
+              </div>
+              <p>App de decisión con IA para gestores públicos. Mapa 2D/3D, chat con RAG y reportes PDF.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Talently Lab</h4>
+                <span class="exp-meta">Frontend Developer · React</span>
+              </div>
+              <p>Desarrollo frontend con React y Tailwind en equipo.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Talently Lab</h4>
+                <span class="exp-meta">QA Tester · Manual Testing</span>
+              </div>
+              <p>Pruebas manuales funcionales, reportes de bugs y testing de APIs con Postman.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Adopta un Junior</h4>
+                <span class="exp-meta">QA Tester · Equipo colaborativo</span>
+              </div>
+              <p>QA en equipos multidisciplinarios. Coordinación, feedback y aseguramiento de calidad.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>NovaMarket E-commerce</h4>
+                <span class="exp-meta">Talently Lab · En curso</span>
+              </div>
+              <p>Testing manual y automatizado con Postman, reportes de bugs y casos de prueba.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>UrbanFix Solutions</h4>
+                <span class="exp-meta">Talently Lab · En curso</span>
+              </div>
+              <p>Proyecto frontend colaborativo con React y Tailwind.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Proyecto Final Automation QA</h4>
+                <span class="exp-meta">Buenos Aires Aprende</span>
+              </div>
+              <p>Automatización de pruebas: Python, Selenium, Pytest, POM, BDD con Behave.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>TalentoLab — Testing QA Manual</h4>
+                <span class="exp-meta">Talento Tech</span>
+              </div>
+              <p>Documentación de testing: epics, features, criterios de aceptación, bugreports.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>ElRincónDelFriki.net</h4>
+                <span class="exp-meta">WordPress · Gestión integral</span>
+              </div>
+              <p>Portal de noticias: SEO, Google Ads, contenido diario y mantenimiento técnico.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Evaluación Heurística — Nielsen</h4>
+                <span class="exp-meta">UX Practice</span>
+              </div>
+              <p>Evaluación UX aplicando las 10 heurísticas de Jakob Nielsen.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Proyectos Autodidactas</h4>
+                <span class="exp-meta">React · JS · APIs</span>
+              </div>
+              <p>Apps web explorando nuevas tecnologías, combinando frontend, backend y testing.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>uTest</h4>
+                <span class="exp-meta">Web & Mobile Testing</span>
+              </div>
+              <p>Testing funcional web y móvil. Reporte de bugs en distintos proyectos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="sec-title">Formación</div>
+          <div class="edu-list">
+            <div class="edu-item">
+              <span class="edu-tag">Carrera</span>
+              <h5>QA Automation Testing</h5>
+              <p>· Metodologías de testing y automatización</p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Carrera</span>
+              <h5>Diseño de Interfaces Web</h5>
+              <p>· UX/UI, Figma, HTML, CSS, JS</p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Tecnicatura</span>
+              <h5>Diseño Gráfico Digital</h5>
+              <p>· UX/UI, Figma, HTML, CSS, JS, Bootstrap, PHP, SQL</p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Cursos</span>
+              <h5>Python, Selenium, TestRail, Postman, Rendimiento, Ágiles</h5>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Curso</span>
+              <h5>Desarrollo Frontend</h5>
+              <p>· HTML, CSS, JavaScript, React, responsive design</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="exp-item">
-      <h4>Talently Lab</h4>
-      <div class="exp-meta">Frontend Developer · React</div>
-      <p>Desarrollo frontend con React y Tailwind en equipo.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>Talently Lab</h4>
-      <div class="exp-meta">QA Tester · Manual Testing</div>
-      <p>Pruebas manuales funcionales, reportes de bugs y testing de APIs con Postman.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>Adopta un Junior</h4>
-      <div class="exp-meta">QA Tester · Equipo colaborativo</div>
-      <p>QA en equipos multidisciplinarios. Coordinación, feedback y aseguramiento de calidad.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>NovaMarket E-commerce</h4>
-      <div class="exp-meta">Talently Lab · En curso</div>
-      <p>Testing manual y automatizado con Postman, reportes de bugs y casos de prueba.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>UrbanFix Solutions</h4>
-      <div class="exp-meta">Talently Lab · En curso</div>
-      <p>Proyecto frontend colaborativo con React y Tailwind.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>Proyecto Final Automation QA</h4>
-      <div class="exp-meta">Buenos Aires Aprende</div>
-      <p>Automatización de pruebas: Python, Selenium, Pytest, POM, BDD con Behave.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>TalentoLab — Testing QA Manual</h4>
-      <div class="exp-meta">Talento Tech</div>
-      <p>Documentación de testing: epics, features, criterios de aceptación, bugreports.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>ElRincónDelFriki.net</h4>
-      <div class="exp-meta">WordPress · Gestión integral</div>
-      <p>Portal de noticias: SEO, Google Ads, contenido diario y mantenimiento técnico.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>Evaluación Heurística — Nielsen</h4>
-      <div class="exp-meta">UX Practice</div>
-      <p>Evaluación UX aplicando las 10 heurísticas de Jakob Nielsen.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>Proyectos Autodidactas</h4>
-      <div class="exp-meta">React · JS · APIs</div>
-      <p>Apps web explorando nuevas tecnologías, combinando frontend, backend y testing.</p>
-    </div>
-
-    <div class="exp-item">
-      <h4>uTest</h4>
-      <div class="exp-meta">Web & Mobile Testing</div>
-      <p>Testing funcional web y móvil. Reporte de bugs en distintos proyectos.</p>
-    </div>
-
-    <div class="sec-title">Formación</div>
-
-    <div class="edu-item"><span class="edu-tag">Carrera</span><h5>QA Automation Testing</h5> <p>Metodologías de testing y automatización.</p></div>
-    <div class="edu-item"><span class="edu-tag">Tecnicatura</span><h5>Diseño Gráfico Digital</h5> <p>UX/UI, Figma, HTML, CSS, JS, Bootstrap, PHP, SQL.</p></div>
-    <div class="edu-item"><span class="edu-tag">Bootcamp</span><h5>Testing QA — Talento Tech</h5> <p>Testing manual intensivo.</p></div>
-    <div class="edu-item"><span class="edu-tag">Curso</span><h5>Selenium · Postman · TestRail · Rendimiento · Ágiles</h5> <p>Automatización, APIs, gestión de casos, estrés y Scrum.</p></div>
-    <div class="edu-item"><span class="edu-tag">Curso</span><h5>Desarrollo Frontend</h5> <p>HTML, CSS, JavaScript, React, responsive design.</p></div>
   </div>
 </body>
 </html>
