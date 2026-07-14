@@ -146,21 +146,18 @@
       </div>
       <div class="projects__grid">
         <div class="card project-card">
-          <div class="project-card__placeholder"><i class="fa-solid fa-code"></i></div>
-          <div class="project-card__body">
           <div class="project-card__top">
+            <div class="project-card__icon"><i class="fa-solid fa-laptop-code"></i></div>
             <span class="project-card__badge">Talently Lab</span>
           </div>
           <h3>UrbanFix Solutions</h3>
           <p>Proyecto frontend colaborativo en equipo con React y Tailwind.</p>
           <div class="project-card__tech"><span>React</span><span>Tailwind</span></div>
           <span class="project-card__soon">en curso</span>
-          </div>
         </div>
         <div class="card project-card">
-          <div class="project-card__preview"><img src="https://image.thum.io/get/width/1200/wait/15/https://s06-26-nc-equipo-69-b2g-frontend.vercel.app/" alt="Preview de BiT" referrerpolicy="no-referrer" onerror="this.parentElement.innerHTML='<div class=\'project-card__placeholder\'><i class=\'fa-solid fa-chart-column\'></i></div>'"/></div>
-          <div class="project-card__body">
           <div class="project-card__top">
+            <div class="project-card__icon"><i class="fa-solid fa-laptop-code"></i></div>
             <span class="project-card__badge">NoCountry Hackathon</span>
           </div>
           <h3>BiT — Panel de Datos Públicos</h3>
@@ -169,7 +166,6 @@
           <div class="project-card__links">
             <a href="https://s06-26-nc-equipo-69-b2g-frontend.vercel.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
             <a href="https://github.com/hevieri/s06-26-nc-equipo-69-b2g" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Código</a>
-          </div>
           </div>
         </div>
         <div class="card project-card" data-content="0"></div>
@@ -236,8 +232,7 @@
     ];
     const $ = id => document.getElementById(id);
     function tmpl(p) {
-      const icon = p.tech && p.tech.includes("React") ? "react" : p.tech && p.tech.includes("PHP") ? "php" : "code";
-      return `${p.demo ? `<div class="project-card__preview"><img src="https://image.thum.io/get/width/1200/wait/5/${p.demo}" alt="Preview de ${p.title}" referrerpolicy="no-referrer" onerror="this.parentElement.innerHTML='<div class=\\'project-card__placeholder\\'><i class=\\'fa-solid fa-${icon}\\'></i></div>'"/></div>` : `<div class="project-card__placeholder"><i class="fa-solid fa-${icon}"></i></div>`}<div class="project-card__body"><div class="project-card__top"><span class="project-card__badge">${p.demo ? "-live" : "repo"}</span></div><h3>${p.title}</h3><p>${p.desc}</p>${p.tech ? `<div class="project-card__tech">${p.tech.map(t => `<span>${t}</span>`).join("")}</div>` : ""}<div class="project-card__links">${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> demo</a>` : ""}<a href="${p.repo}" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> código</a></div></div>`;
+      return `<div class="project-card__icon"><i class="fa-solid fa-layer-group"></i></div><h3>${p.title}</h3><p>${p.desc}</p>${p.tech ? `<div class="project-card__tech">${p.tech.map(t => `<span>${t}</span>`).join("")}</div>` : ""}<div class="project-card__links">${p.demo ? `<a href="${p.demo}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> demo</a>` : ""}<a href="${p.repo}" target="_blank"><i class="fa-brands fa-github"></i> código</a></div>`;
     }
     document.addEventListener("DOMContentLoaded", () => {
       $("front-render").innerHTML = DEV_FRONT.map(i => `<div class="stack-item"><i class="${i.icon}"></i>${i.name}</div>`).join("");
