@@ -642,7 +642,7 @@ details:not([open]) .tl__item:nth-last-child(n+3) { display:none }
   width:100%;
   height:180px;
   object-fit:cover;
-  object-position:top;
+  object-position:top center;
   transition:transform .4s ease
 }
 .project-card:hover .project-card__preview img { transform:scale(1.03) }
