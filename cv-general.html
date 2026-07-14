@@ -135,7 +135,7 @@
       gap: 12px;
     }
     .sec-title {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 2.5px;
@@ -159,7 +159,7 @@
       border-left: 2.5px solid #ede9fe;
     }
     .exp-header { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-    .exp-header h4 { font-size: 10.5px; font-weight: 700; color: #1a1a2e; }
+    .exp-header h4 { font-size: 10px; font-weight: 700; color: #1a1a2e; }
     .exp-header .exp-meta {
       font-size: 7.5px;
       font-weight: 500;
@@ -168,7 +168,7 @@
       padding: 1px 6px;
       border-radius: 8px;
     }
-    .exp-item p { font-size: 9px; color: #666; line-height: 1.3; margin-top: 1px; }
+    .exp-item p { font-size: 8.5px; color: #666; line-height: 1.3; margin-top: 1px; }
 
     .edu-list { display: flex; flex-direction: column; gap: 5px; }
     .edu-item { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
@@ -183,8 +183,15 @@
       letter-spacing: 0.5px;
       flex-shrink: 0;
     }
-    .edu-item h5 { font-size: 9.5px; font-weight: 600; color: #1a1a2e; }
-    .edu-item p { font-size: 8.5px; color: #888; }
+    .edu-item h5 { font-size: 9px; font-weight: 600; color: #1a1a2e; }
+    .edu-item p { font-size: 8px; color: #888; }
+
+    .summary {
+      font-size: 9.5px;
+      color: #444;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
   </style>
 </head>
 <body>
@@ -196,6 +203,8 @@
     </div>
 
     <hr class="top-divider">
+
+    <p class="summary">Oriunda de Buenos Aires, arranqué en el mundo tech desde el diseño gráfico y fui transitando hacia el desarrollo frontend y el testing QA de forma autodidacta. Combino visión estética con código limpio y calidad de software. Uso AI-assisted development para acelerar procesos y resolver desafíos técnicos de forma eficiente.</p>
 
     <div class="main-layout">
       <div class="sidebar">
@@ -276,84 +285,84 @@
                 <h4>BiT — Panel de Datos Públicos</h4>
                 <span class="exp-meta">NoCountry Hackathon · Full Stack</span>
               </div>
-              <p>App de decisión con IA para gestores públicos. Mapa 2D/3D, chat con RAG y reportes PDF.</p>
+              <p>App de decisión con IA para gestores públicos. Integré un mapa interactivo 2D/3D con Mapbox, un chat con RAG para consultar datos públicos y generación de reportes PDF. Monorepo con Turborepo, backend Express, pipeline ETL en Python y Supabase.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>Talently Lab</h4>
                 <span class="exp-meta">Frontend Developer · React</span>
               </div>
-              <p>Desarrollo frontend con React y Tailwind en equipo.</p>
+              <p>Desarrollo de interfaz de usuario con React y Tailwind CSS en equipo ágil. Implementación de componentes reutilizables, consumo de APIs REST, routing y gestión de estado. Reuniones de coordinación, revisiones de código y entregas en sprints.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>Talently Lab</h4>
                 <span class="exp-meta">QA Tester · Manual Testing</span>
               </div>
-              <p>Pruebas manuales funcionales, reportes de bugs y testing de APIs con Postman.</p>
+              <p>Ejecución de casos de prueba manuales sobre funcionalidades CRUD, formularios y flujos de usuario. Reporte de bugs con evidencia visual, steps to reproduce y testing de APIs REST con Postman.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>Adopta un Junior</h4>
                 <span class="exp-meta">QA Tester · Equipo colaborativo</span>
               </div>
-              <p>QA en equipos multidisciplinarios. Coordinación, feedback y aseguramiento de calidad.</p>
+              <p>Ejecución de pruebas funcionales end-to-end en equipo multidisciplinario. Validación de criterios de aceptación, reporte de bugs con evidencia y seguimiento de resolución en ciclos de sprint.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>NovaMarket E-commerce</h4>
                 <span class="exp-meta">Talently Lab · En curso</span>
               </div>
-              <p>Testing manual y automatizado con Postman, reportes de bugs y casos de prueba.</p>
+              <p>Testing de API REST para e-commerce: validación de endpoints (GET, POST, PUT, DELETE), aserciones de status codes y schemas, documentación de bugs con evidencia en Postman.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>UrbanFix Solutions</h4>
                 <span class="exp-meta">Talently Lab · En curso</span>
               </div>
-              <p>Proyecto frontend colaborativo con React y Tailwind.</p>
+              <p>Plataforma de servicios urbanos con React y Tailwind CSS. Sistema de roles (admin/usuario), CRUD de reportes, geolocalización y diseño responsive. Trabajo colaborativo con metodología ágil.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>Proyecto Final Automation QA</h4>
                 <span class="exp-meta">Buenos Aires Aprende</span>
               </div>
-              <p>Automatización de pruebas: Python, Selenium, Pytest, POM, BDD con Behave.</p>
+              <p>Automatización de pruebas funcionales sobre e-commerce (SauceDemo): login, agregar productos al carrito, completar checkout y validar formularios. Suite con Python, Selenium WebDriver, Pytest, Page Object Model y BDD con Behave.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>TalentoLab — Testing QA Manual</h4>
                 <span class="exp-meta">Talento Tech</span>
               </div>
-              <p>Documentación de testing: epics, features, criterios de aceptación, bugreports.</p>
+              <p>Documentación completa de testing manual: storytelling, epics, features, criterios de aceptación, testset con casos de prueba, bugreports con evidencia, matriz de cobertura y reporte de ciclo de pruebas.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>ElRincónDelFriki.net</h4>
                 <span class="exp-meta">WordPress · Gestión integral</span>
               </div>
-              <p>Portal de noticias: SEO, Google Ads, contenido diario y mantenimiento técnico.</p>
+              <p>Gestión integral del sitio: edición de contenido, SEO on-page, monetización con Google Ads, analítica y mantenimiento técnico diario.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>Evaluación Heurística — Nielsen</h4>
                 <span class="exp-meta">UX Practice</span>
               </div>
-              <p>Evaluación UX aplicando las 10 heurísticas de Jakob Nielsen.</p>
+              <p>Evaluación UX aplicando las 10 heurísticas de Jakob Nielsen: identificación de problemas de usabilidad, priorización por severidad y recomendaciones.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>Proyectos Autodidactas</h4>
                 <span class="exp-meta">React · JS · APIs</span>
               </div>
-              <p>Apps web explorando nuevas tecnologías, combinando frontend, backend y testing.</p>
+              <p>Aplicación web con consumo de PokeAPI REST: búsqueda de Pokémon por nombre, visualización de stats, tipos y evoluciones. Diseño responsive con CSS vanilla y paginación.</p>
             </div>
             <div class="exp-item">
               <div class="exp-header">
                 <h4>uTest</h4>
                 <span class="exp-meta">Web & Mobile Testing</span>
               </div>
-              <p>Testing funcional web y móvil. Reporte de bugs en distintos proyectos.</p>
+              <p>Testing funcional web y móvil en escenarios reales: ejecución de casos de prueba, exploración de aplicaciones y reporte de bugs con evidencia visual y steps to reproduce.</p>
             </div>
           </div>
         </div>

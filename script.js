@@ -49,14 +49,14 @@ const DATA = {
     ],
   },
   projects: [
-    { title: "PokeAppi", desc: "App web con consumo de PokeAPI, diseño responsive y búsqueda de Pokémon.", repo: "https://github.com/hevieri/pokeappi", demo: "https://pokeappi.vercel.app/", tech: ["PokeAPI", "JavaScript", "CSS"] },
-    { title: "SlotMachine", desc: "Máquina tragamonedas interactiva con lógica en JavaScript y diseño retro.", repo: "https://github.com/hevieri/SlotMachine", demo: "https://slot-machine-nu-ecru.vercel.app/", tech: ["JavaScript", "CSS", "HTML"] },
-    { title: "Calculador", desc: "Suite de herramientas de conversión — múltiples calculadoras y conversores.", repo: "https://github.com/hevieri/Calculador", demo: "https://hevieri.github.io/Calculador/", tech: ["JavaScript", "HTML", "CSS"] },
-    { title: "Tasky", desc: "Gestor de tareas con visualización de datos — JSON a gráficos y tablas.", repo: "https://github.com/hevieri/Tasky", demo: "https://hevieri.github.io/Tasky/", tech: ["JavaScript", "JSON", "CSS"] },
-    { title: "Tienda", desc: "Plataforma web de comercio electrónico con diseño responsive y carrito de compras.", repo: "https://github.com/hevieri/Tienda", tech: ["PHP", "SQL"] },
-    { title: "Morningstar", desc: "Sitio responsive con HTML5 y CSS3, enfocado en accesibilidad y estructura semántica.", repo: "https://github.com/hevieri/Morningstar", demo: "https://hevieri.github.io/Morningstar/", tech: ["HTML5", "CSS3"] },
-    { title: "MangaX", desc: "App web de exploración de mangas con consumo de API, diseño responsive.", repo: "https://github.com/hevieri/MangaX", tech: ["React", "API", "JavaScript"] },
-    { title: "MugiwaraWeb", desc: "Sitio temático de One Piece con diseño responsive y estructura semántica.", repo: "https://github.com/hevieri/MugiwaraWeb", tech: ["PHP", "SQL"] },
+    { title: "PokeAppi", desc: "App web que consume la PokeAPI REST para buscar y mostrar Pokémon con datos detallados (tipos, stats, evoluciones). Diseño responsive, búsqueda en tiempo real y paginación.", repo: "https://github.com/hevieri/pokeappi", demo: "https://pokeappi.vercel.app/", tech: ["PokeAPI", "JavaScript", "CSS"] },
+    { title: "SlotMachine", desc: "Máquina tragamonedas interactiva con lógica de juego en JavaScript, animaciones CSS y estado persistente. Simula tiradas con probabilidad real y efectos visuales.", repo: "https://github.com/hevieri/SlotMachine", demo: "https://slot-machine-nu-ecru.vercel.app/", tech: ["JavaScript", "CSS", "HTML"] },
+    { title: "Calculador", desc: "Suite de herramientas de conversión con múltiples calculadoras: temperatura, peso, distancia, moneda y más. Interfaz modular con JS vanilla y actualización en vivo.", repo: "https://github.com/hevieri/Calculador", demo: "https://hevieri.github.io/Calculador/", tech: ["JavaScript", "HTML", "CSS"] },
+    { title: "Tasky", desc: "Gestor de tareas con visualización de datos: importa JSON y genera gráficos y tablas dinámicas. CRUD completo con localStorage para persistencia local.", repo: "https://github.com/hevieri/Tasky", demo: "https://hevieri.github.io/Tasky/", tech: ["JavaScript", "JSON", "CSS"] },
+    { title: "Tienda", desc: "E-commerce completo con catálogo de productos, carrito de compras, proceso de checkout y base de datos SQL. Backend en PHP con arquitectura MVC básica.", repo: "https://github.com/hevieri/Tienda", tech: ["PHP", "SQL"] },
+    { title: "Morningstar", desc: "Sitio web estático responsive con HTML5 semántico y CSS3. Enfocado en accesibilidad (WCAG), estructura limpia y tipografía escalable con units relativas.", repo: "https://github.com/hevieri/Morningstar", demo: "https://hevieri.github.io/Morningstar/", tech: ["HTML5", "CSS3"] },
+    { title: "MangaX", desc: "App de exploración de manga con consumo de API externa, búsqueda por género, sistema de favoritos y diseño responsive. Componentes modulares en React.", repo: "https://github.com/hevieri/MangaX", tech: ["React", "API", "JavaScript"] },
+    { title: "MugiwaraWeb", desc: "Sitio web temático de One Piece con diseño responsive, estructura semántica y backend en PHP. Contenido dinámico cargado desde base de datos SQL.", repo: "https://github.com/hevieri/MugiwaraWeb", tech: ["PHP", "SQL"] },
   ],
 };
 
