@@ -12,16 +12,21 @@
 </head>
 <body>
 
-  <nav class="nav">
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+  <nav class="nav" aria-label="Navegación principal">
     <a href="index.html" class="nav__logo">hevieri</a>
-    <div class="nav__links">
-      <a href="qa.html" class="nav__track nav__track--qa">qa</a>
-      <a href="dev.html" class="nav__track nav__track--dev">dev</a>
-      <a href="#projects">proyectos</a>
+    <button class="nav__hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links" id="nav-links" role="menubar">
+      <a href="qa.html" class="nav__track nav__track--qa" role="menuitem">qa</a>
+      <a href="dev.html" class="nav__track nav__track--dev" role="menuitem">dev</a>
+      <a href="#projects" role="menuitem">proyectos</a>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <div class="hero__badge">
         <span class="status-dot"></span> disponible
@@ -35,9 +40,9 @@
       <p class="hero__desc">Desarrollo web y testing QA. <span class="mono">never stop learning</span></p>
       <div class="hero__actions">
         <div class="cv-group">
-          <button class="btn" onclick="toggleCVDropdown(event)">
-            <i class="fa-solid fa-download"></i> descargar cv
-            <i class="fa-solid fa-chevron-down" id="cv-arrow"></i>
+          <button class="btn" aria-haspopup="true" aria-expanded="false" aria-controls="cv-dropdown" onclick="toggleCVDropdown(event)">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> descargar cv
+            <i class="fa-solid fa-chevron-down" id="cv-arrow" aria-hidden="true"></i>
           </button>
           <div class="cv-dropdown" id="cv-dropdown">
             <a href="cv-general-ats.pdf" download><i class="fa-solid fa-file-lines"></i> CV General (ATS)</a>
@@ -49,7 +54,7 @@
       </div>
     </section>
 
-    <section class="section" id="stack">
+    <section class="section" id="stack" aria-label="Stack tecnológico">
       <div class="section__head">
         <span class="section__num">01</span>
         <h2>Stack</h2>
@@ -74,7 +79,7 @@
       </div>
     </section>
 
-    <section class="section" id="exp">
+    <section class="section" id="exp" aria-label="Experiencia">
       <details>
         <summary class="section__head">
           <span class="section__num">02</span>
@@ -162,7 +167,7 @@
       </details>
     </section>
 
-    <section class="section" id="edu">
+    <section class="section" id="edu" aria-label="Formación">
       <details>
         <summary class="section__head">
           <span class="section__num">03</span>
@@ -181,7 +186,7 @@
       </details>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section" id="projects" aria-label="Proyectos">
       <details open>
         <summary class="section__head">
           <span class="section__num">04</span>
@@ -279,12 +284,12 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <span class="mono">hevieri · 2026</span>
     <div class="footer__links">
-      <a href="mailto:hevieri.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-      <a href="https://github.com/hevieri" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/hevieri/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:hevieri.dev@gmail.com" aria-label="Enviar email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://github.com/hevieri" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/hevieri/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
     </div>
   </footer>
 

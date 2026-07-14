@@ -12,14 +12,19 @@
 </head>
 <body>
 
-  <nav class="nav">
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+  <nav class="nav" aria-label="Navegación principal">
     <a href="index.html" class="nav__logo">hevieri</a>
-    <div class="nav__links">
-      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> inicio</a>
+    <button class="nav__hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú de navegación">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav__links" id="nav-links">
+      <a href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> inicio</a>
     </div>
   </nav>
 
-  <main class="track-page">
+  <main class="track-page" id="main-content">
     <div class="track-page__head" style="color:var(--blue)">
       <i class="fa-solid fa-laptop-code"></i> Track Dev
     </div>
@@ -36,9 +41,9 @@
       <p class="hero__desc">Desarrollo frontend, UI y construcción de apps web</p>
       <div class="hero__actions">
         <div class="cv-group">
-          <button class="btn" onclick="toggleCVDropdown(event)">
-            <i class="fa-solid fa-download"></i> descargar cv
-            <i class="fa-solid fa-chevron-down" id="cv-arrow"></i>
+          <button class="btn" aria-haspopup="true" aria-expanded="false" aria-controls="cv-dropdown" onclick="toggleCVDropdown(event)">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> descargar cv
+            <i class="fa-solid fa-chevron-down" id="cv-arrow" aria-hidden="true"></i>
           </button>
           <div class="cv-dropdown" id="cv-dropdown">
             <a href="cv-frontend-ats.pdf" download><i class="fa-solid fa-laptop-code"></i> Frontend (ATS)</a>
@@ -174,12 +179,12 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <span class="mono">hevieri · 2026</span>
       <div class="footer__links">
-        <a href="mailto:hevieri.dev@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-        <a href="https://github.com/hevieri" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/hevieri/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:hevieri.dev@gmail.com" aria-label="Enviar email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/hevieri" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/hevieri/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
       </div>
     </footer>
   </main>
@@ -239,13 +244,35 @@
     function toggleCVDropdown(e) {
       e.stopPropagation();
       const m = $("cv-dropdown"), a = $("cv-arrow");
+      const btn = document.querySelector("[aria-controls='cv-dropdown']");
       m.classList.toggle("open");
       a.style.transform = m.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
+      if (btn) btn.setAttribute("aria-expanded", String(m.classList.contains("open")));
     }
     document.addEventListener("click", () => {
       const m = $("cv-dropdown"), a = $("cv-arrow");
-      if (m?.classList.contains("open")) { m.classList.remove("open"); a.style.transform = "rotate(0)"; }
+      if (m?.classList.contains("open")) { m.classList.remove("open"); a.style.transform = "rotate(0)";
+        const btn = document.querySelector("[aria-controls='cv-dropdown']");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      }
     });
+
+    // Hamburger menu
+    const hamburger = document.querySelector(".nav__hamburger");
+    const navLinks = document.querySelector(".nav__links");
+    if (hamburger && navLinks) {
+      hamburger.addEventListener("click", () => {
+        const expanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", String(!expanded));
+        navLinks.classList.toggle("nav__links--open");
+      });
+      document.addEventListener("click", (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+          hamburger.setAttribute("aria-expanded", "false");
+          navLinks.classList.remove("nav__links--open");
+        }
+      });
+    }
   </script>
 </body>
 </html>

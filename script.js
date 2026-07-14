@@ -92,8 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleCVDropdown(e) {
   e.stopPropagation();
   const m = $("cv-dropdown"), a = $("cv-arrow");
+  const btn = document.querySelector("[aria-controls='cv-dropdown']");
   m.classList.toggle("open");
   a.style.transform = m.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
+  if (btn) btn.setAttribute("aria-expanded", String(m.classList.contains("open")));
 }
 
 document.addEventListener("click", () => {
@@ -101,5 +103,24 @@ document.addEventListener("click", () => {
   if (m?.classList.contains("open")) {
     m.classList.remove("open");
     a.style.transform = "rotate(0)";
+    const btn = document.querySelector("[aria-controls='cv-dropdown']");
+    if (btn) btn.setAttribute("aria-expanded", "false");
   }
 });
+
+// Hamburger menu
+const hamburger = document.querySelector(".nav__hamburger");
+const navLinks = document.querySelector(".nav__links");
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", String(!expanded));
+    navLinks.classList.toggle("nav__links--open");
+  });
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.setAttribute("aria-expanded", "false");
+      navLinks.classList.remove("nav__links--open");
+    }
+  });
+}
