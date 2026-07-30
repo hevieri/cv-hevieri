@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Erika Helfenstern - CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      line-height: 1.5;
+      color: #1e1e2e;
+      background: #fff;
+      padding: 0;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 18mm 16mm;
+      margin: 0 auto;
+    }
+    h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+    h1 span { color: #7c3aed; }
+    .badge {
+      display: inline-block;
+      background: #7c3aed;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      color: #555;
+      font-size: 11px;
+      margin: 6px 0 10px;
+      max-width: 70%;
+    }
+    .socials {
+      display: flex;
+      gap: 14px;
+      margin: 10px 0 14px;
+    }
+    .socials a {
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .socials i { margin-right: 4px; color: #7c3aed; }
+
+    hr { border: none; border-top: 1px solid #ddd; margin: 12px 0; }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #7c3aed;
+      margin-bottom: 8px;
+    }
+    .about-text {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .columns { display: flex; gap: 20px; }
+    .col { flex: 1; }
+    .col h4 {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #7c3aed;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
+    }
+    .col ul {
+      list-style: none;
+      padding: 0;
+    }
+    .col li {
+      font-size: 10px;
+      color: #333;
+      padding: 2px 0;
+    }
+    .col li i {
+      color: #7c3aed;
+      width: 16px;
+      font-size: 9px;
+    }
+
+    .agile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .agile-tags span {
+      background: #f3e8ff;
+      color: #7c3aed;
+      font-size: 9px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+    .agile-tags i { margin-right: 4px; }
+
+    .exp-item {
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+    }
+    .exp-item h4 {
+      font-size: 11px;
+      font-weight: 700;
+      color: #1e1e2e;
+    }
+    .exp-item h4 i { color: #7c3aed; margin-right: 6px; }
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 3px 0;
+    }
+    .exp-tags span {
+      background: #f3e8ff;
+      color: #6b21a8;
+      font-size: 8px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 8px;
+    }
+    .exp-item p {
+      font-size: 9.5px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .edu-row { display: flex; gap: 20px; }
+    .edu-col { flex: 1; }
+    .edu-subheader {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .edu-subheader.qa { color: #7c3aed; border-bottom: 2px solid #7c3aed; }
+    .edu-subheader.front { color: #0284c7; border-bottom: 2px solid #0284c7; }
+    .edu-item { margin-bottom: 7px; page-break-inside: avoid; }
+    .edu-tag {
+      font-size: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #f3e8ff;
+      color: #7c3aed;
+      padding: 1px 6px;
+      border-radius: 3px;
+      display: inline-block;
+      margin-bottom: 2px;
+    }
+    .edu-item h5 { font-size: 10px; font-weight: 600; }
+    .edu-item p { font-size: 8.5px; color: #555; line-height: 1.4; }
+
+    .footer-note {
+      text-align: center;
+      font-size: 8px;
+      color: #999;
+      margin-top: 16px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div>
+      <span class="badge">Developer & QA Tester Junior</span>
+      <h1>Erika <span>Helfenstern</span></h1>
+      <p class="subtitle">Hevieri · Desarrollo Web y Testing QA. Curiosa por naturaleza, siempre metiéndome en algo nuevo.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i>hevieri</a>
+        <a href="#"><i class="fa-brands fa-github"></i>hevieri</a>
+        <a href="#"><i class="fa-regular fa-envelope"></i>hevieri.dev@gmail.com</a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i>11 6217-8105</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="about-text">
+      QA Tester y desarrolladora front‑end. Tengo la base para desenvolverme sola, y cuando algo se complica o hay que ir más rápido, la IA me da una mano. Siempre estoy curioseando tecnologías nuevas.
+    </div>
+
+    <hr>
+
+    <div class="section-title">Stack Tecnológico</div>
+    <div class="columns">
+      <div class="col">
+        <h4><i class="fa-solid fa-flask"></i> Quality Assurance</h4>
+        <ul>
+          <li><i class="fa-solid fa-magnifying-glass"></i> Manual Testing</li>
+          <li><i class="fa-solid fa-robot"></i> QA Automation</li>
+          <li><i class="fa-solid fa-vial-circle-check"></i> uTest Platform</li>
+          <li><i class="fa-solid fa-mobile-screen"></i> Mobile Testing</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 style="color:#0284c7;"><i class="fa-solid fa-laptop-code"></i> Front-End Dev</h4>
+        <ul>
+          <li><i class="fa-brands fa-html5" style="color:#0284c7;"></i> HTML / CSS</li>
+          <li><i class="fa-brands fa-react" style="color:#0284c7;"></i> React / JS</li>
+          <li><i class="fa-solid fa-wand-magic-sparkles" style="color:#0284c7;"></i> Tailwind</li>
+          <li><i class="fa-brands fa-bootstrap" style="color:#0284c7;"></i> Bootstrap</li>
+          <li><i class="fa-solid fa-code-merge" style="color:#0284c7;"></i> jQuery</li>
+          <li><i class="fa-solid fa-database" style="color:#0284c7;"></i> Firebase</li>
+          <li><i class="fa-brands fa-git-alt" style="color:#0284c7;"></i> Git y GitHub</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 style="color:#d97706;"><i class="fa-solid fa-server"></i> Back-End & Tools</h4>
+        <ul>
+          <li><i class="fa-brands fa-php" style="color:#d97706;"></i> PHP / SQL</li>
+          <li><i class="fa-brands fa-wordpress" style="color:#d97706;"></i> WordPress</li>
+          <li><i class="fa-brands fa-github" style="color:#d97706;"></i> GitHub</li>
+          <li><i class="fa-solid fa-house-laptop" style="color:#d97706;"></i> Localhost</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:8px;">
+      <h4 style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#059669;border-bottom:1px solid #ddd;padding-bottom:4px;margin-bottom:6px;">
+        <i class="fa-solid fa-arrows-rotate" style="color:#059669;"></i> Metodologías Ágiles
+      </h4>
+      <div class="agile-tags">
+        <span><i class="fa-solid fa-arrows-rotate"></i> Scrum</span>
+        <span><i class="fa-solid fa-columns"></i> Kanban</span>
+        <span><i class="fa-brands fa-jira"></i> Jira</span>
+        <span><i class="fa-brands fa-trello"></i> Trello</span>
+        <span><i class="fa-solid fa-list-check"></i> ClickUp</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="section-title">Experiencia</div>
+
+    <div class="exp-item">
+      <h4><i class="fa-solid fa-laptop-code"></i> ElRincónDelFriki.net</h4>
+      <div class="exp-tags">
+        <span>WordPress</span> <span>SEO</span> <span>Google Ads</span> <span>HTML / CSS</span>
+      </div>
+      <p>Sitio en WordPress donde subía contenido constantemente y administraba todo: SEO, monetización con publicidad de Google, imágenes, mantenimiento y actualizaciones diarias.</p>
+    </div>
+
+    <div class="exp-item">
+      <h4><i class="fa-solid fa-users"></i> Adopta un Junior</h4>
+      <div class="exp-tags">
+        <span>QA Testing</span> <span>Pruebas Funcionales</span> <span>Team Collaboration</span>
+      </div>
+      <p>Ejercí el rol de QA Tester dentro de equipos organizados por áreas, participando en reuniones de coordinación y ciclos de feedback. Colaboré con desarrolladores y diseñadores para asegurar la calidad del software en proyectos que simulaban un entorno laboral real.</p>
+    </div>
+
+    <div class="exp-item">
+      <h4><i class="fa-solid fa-bug"></i> uTest</h4>
+      <div class="exp-tags">
+        <span>Web Testing</span> <span>Mobile Testing</span> <span>Bug Reports</span>
+      </div>
+      <p>Mi paso por uTest me permitió enfrentar escenarios auténticos de testing Web y Mobile, adquiriendo disciplina, precisión y capacidad de adaptación en distintos proyectos y contextos.</p>
+    </div>
+
+    <div class="exp-item">
+      <h4><i class="fa-solid fa-lightbulb"></i> Proyectos Autodidactas</h4>
+      <div class="exp-tags">
+        <span>Frontend</span> <span>Backend</span> <span>Testing</span> <span>APIs</span>
+      </div>
+      <p>Suelo llevar adelante proyectos autodidactas para seguir aprendiendo, experimentar nuevas herramientas y perfeccionar mis habilidades en QA y front‑end.</p>
+    </div>
+
+    <hr>
+
+    <div class="section-title">Formación y Certificaciones</div>
+    <div class="edu-row">
+      <div class="edu-col">
+        <div class="edu-subheader qa"><i class="fa-solid fa-flask"></i> Testing / QA</div>
+
+        <div class="edu-item">
+          <span class="edu-tag">Carrera</span>
+          <h5>Carrera QA Automation Testing</h5>
+          <p>Cursos avanzados en metodologías de testing y herramientas de automatización.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Bootcamp</span>
+          <h5>Testing QA</h5>
+          <p>Formación intensiva en testing manual a través de Talento Tech, enfocada en la detección de errores, documentación de casos de prueba y aseguramiento de calidad en entornos reales.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Automatización con Selenium</h5>
+          <p>Automatización de pruebas funcionales en aplicaciones web con Selenium WebDriver, formando parte del programa Talento Tech.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Pruebas de API con Postman</h5>
+          <p>Testing de servicios REST con Postman, colecciones, variables de entorno y aserciones dinámicas.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Pruebas de Rendimiento</h5>
+          <p>Identificación de cuellos de botella, estrés y carga en aplicaciones web con herramientas open-source.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Gestión de Casos de Prueba</h5>
+          <p>Diseño, documentación y trazabilidad de casos de prueba usando TestRail y buenas prácticas ISTQB.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Metodologías Ágiles (Scrum)</h5>
+          <p>Fundamentos de Scrum, roles, ceremonias y aplicación del marco ágil en equipos de desarrollo y testing.</p>
+        </div>
+      </div>
+      <div class="edu-col">
+        <div class="edu-subheader front"><i class="fa-solid fa-laptop-code"></i> Desarrollo</div>
+
+        <div class="edu-item">
+          <span class="edu-tag">Tecnicatura</span>
+          <h5>Diseño Gráfico Digital</h5>
+          <p>Formación integral que combinó UX/UI, marketing digital y herramientas como Figma, HTML, CSS, jQuery, Bootstrap, JavaScript, PHP y SQL.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>React.js</h5>
+          <p>Componentes funcionales, hooks, manejo de estado, routing y consumo de APIs.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>JavaScript Intermedio</h5>
+          <p>POO, closures, promesas, asincronía y manipulación avanzada del DOM.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>JavaScript Básico</h5>
+          <p>Fundamentos de JavaScript: variables, funciones, DOM, eventos y lógica, cursado en Educación IT.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>PHP y SQL</h5>
+          <p>Desarrollo back-end con PHP y bases de datos SQL: consultas, CRUD, conexión a bases de datos y aplicaciones dinámicas.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>SQL</h5>
+          <p>Consultas avanzadas, joins, subconsultas, índices y optimización de bases de datos relacionales.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Sass y CSS Moderno</h5>
+          <p>Preprocesadores, Grid, Flexbox, animaciones CSS, arquitectura de estilos y diseño responsivo avanzado.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Diseño UX/UI con Figma</h5>
+          <p>Prototipado, sistemas de diseño, componentes reutilizables y colaboración en equipo.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Desarrollo Front-End</h5>
+          <p>Formación práctica en HTML, CSS, JavaScript y Bootstrap, enfocada en interfaces modernas y responsivas.</p>
+        </div>
+        <div class="edu-item">
+          <span class="edu-tag">Curso</span>
+          <h5>Git & GitHub Avanzado</h5>
+          <p>Ramas, merge, resolución de conflictos, pull requests y flujos de trabajo colaborativos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Erika Helfenstern · Tester & Developer · 2026
+    </div>
+  </div>
+</body>
+</html>

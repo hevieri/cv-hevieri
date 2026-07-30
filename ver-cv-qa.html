@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - QA Tester | Erika Helfenstern</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1e1e2e; font-family: system-ui, sans-serif; height: 100vh; display: flex; flex-direction: column; }
+    .toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 24px; background: #2a2a3e; color: #fff;
+      flex-shrink: 0;
+    }
+    .toolbar span { font-size: 14px; font-weight: 600; color: #ccc; display: flex; align-items: center; gap: 10px; }
+    .toolbar span i { color: #7c3aed; }
+    .btn-download {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #7c3aed; color: #fff; border: none; border-radius: 8px;
+      padding: 10px 22px; font-size: 14px; font-weight: 600; cursor: pointer;
+      text-decoration: none; transition: background .2s;
+    }
+    .btn-download:hover { background: #6d28d9; }
+    iframe { flex: 1; width: 100%; border: none; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <span><i class="fa-regular fa-file-lines"></i> CV - QA Tester</span>
+    <button class="btn-download" onclick="descargarPDF()"><i class="fa-solid fa-download"></i> Descargar</button>
+  </div>
+  <iframe src="cv-qa.html"></iframe>
+  <script>
+    function descargarPDF() {
+      var a = document.createElement('a');
+      a.href = 'cv-qa.pdf';
+      a.download = 'Erika Helfenstern - CV QA.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</body>
+</html>

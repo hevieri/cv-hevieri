@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Erika Helfenstern - Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.45;
+      color: #1e1e2e;
+      background: #fff;
+    }
+    @page { margin: 0; size: A4; }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 16mm 18mm 14mm;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    .header { margin-bottom: 6px; text-align: center; }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #fff;
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+      box-shadow: 0 2px 10px rgba(2,132,199,0.3);
+    }
+    h1 { font-size: 32px; font-weight: 800; letter-spacing: -1px; color: #111; line-height: 1.1; }
+    h1 span { color: #0284c7; }
+    .subtitle {
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+      letter-spacing: 0.5px;
+      margin-top: 3px;
+    }
+
+    .top-divider {
+      height: 3px;
+      border: none;
+      border-radius: 2px;
+      background: linear-gradient(90deg, transparent, #0284c7 20%, #38bdf8 50%, #0284c7 80%, transparent);
+      margin-bottom: 14px;
+    }
+
+    /* ── Layout ── */
+    .main-layout {
+      display: flex;
+      flex: 1;
+      gap: 18px;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 170px;
+      min-width: 170px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #f8fbff;
+      border-radius: 8px;
+      padding: 10px;
+      margin: -4px -4px -4px 0;
+    }
+    .sidebar-section { }
+    .stitle {
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #0284c7;
+      margin-bottom: 6px;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #e0f2fe;
+    }
+    .contact-list { display: flex; flex-direction: column; gap: 3px; }
+    .contact-list a, .contact-list span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9px;
+      font-weight: 500;
+      color: #555;
+      text-decoration: none;
+    }
+    .contact-list i { color: #0284c7; width: 12px; font-size: 9px; text-align: center; }
+
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 3px; }
+    .pill {
+      display: inline-block;
+      font-size: 7.5px;
+      font-weight: 600;
+      color: #0369a1;
+      background: #f0f9ff;
+      border: 1px solid #e0f2fe;
+      padding: 2px 6px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+    .pill.lang {
+      color: #555;
+      background: #f8f8f8;
+      border-color: #eee;
+    }
+    .skill-cat {
+      font-size: 7px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      margin-bottom: 3px;
+      margin-top: 7px;
+    }
+    .skill-cat:first-child { margin-top: 0; }
+
+    /* ── Content ── */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sec-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: #0284c7;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sec-title::after {
+      content: "";
+      flex: 1;
+      height: 1.5px;
+      background: linear-gradient(90deg, #e0f2fe, transparent);
+      border-radius: 1px;
+    }
+
+    .exp-list { display: flex; flex-direction: column; gap: 6px; }
+    .exp-item {
+      padding: 4px 0 4px 10px;
+      border-left: 2.5px solid #e0f2fe;
+    }
+    .exp-header { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .exp-header h4 { font-size: 10px; font-weight: 700; color: #1a1a2e; }
+    .exp-header .exp-meta {
+      font-size: 7.5px;
+      font-weight: 500;
+      color: #999;
+      background: #f0f9ff;
+      padding: 1px 6px;
+      border-radius: 8px;
+    }
+    .exp-item p { font-size: 8.5px; color: #666; line-height: 1.3; margin-top: 1px; }
+
+    .edu-list { display: flex; flex-direction: column; gap: 5px; }
+    .edu-item { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+    .edu-tag {
+      font-size: 6.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      color: #0284c7;
+      padding: 2px 6px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .edu-item h5 { font-size: 9px; font-weight: 600; color: #1a1a2e; }
+    .edu-item p { font-size: 8px; color: #888; }
+
+    .summary {
+      font-size: 9.5px;
+      color: #444;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <span class="badge">Frontend Developer</span>
+      <h1>Erika <span>Helfenstern</span></h1>
+      <div class="subtitle">Testing QA & Desarrollo Frontend</div>
+    </div>
+
+    <hr class="top-divider">
+
+    <p class="summary">Desarrolladora front-end con formación en diseño gráfico digital. Experiencia en React, JavaScript, Tailwind y WordPress. Combino visión estética con código limpio y funcional. Uso AI-assisted development para prototipar rápido, iterar eficiente y mantener la calidad del código.</p>
+
+    <div class="main-layout">
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <div class="stitle">Contacto</div>
+          <div class="contact-list">
+            <span><i class="fa-solid fa-location-dot"></i>CABA, Argentina</span>
+            <a href="https://wa.me/541162178105"><i class="fa-brands fa-whatsapp"></i>+54 11 6217-8105</a>
+            <a href="mailto:hevieri.dev@gmail.com"><i class="fa-solid fa-envelope"></i>hevieri.dev@gmail.com</a>
+            <a href="https://www.linkedin.com/in/hevieri/"><i class="fa-brands fa-linkedin"></i>/in/hevieri</a>
+            <a href="https://github.com/hevieri"><i class="fa-brands fa-github"></i>github/hevieri</a>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="skill-cat">Frontend</div>
+          <div class="skill-pills">
+            <span class="pill">React</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">HTML5/CSS3</span>
+            <span class="pill">Tailwind</span>
+            <span class="pill">Sass</span>
+            <span class="pill">Bootstrap</span>
+          </div>
+          <div class="skill-cat">Herramientas</div>
+          <div class="skill-pills">
+            <span class="pill">Git</span>
+            <span class="pill">Figma</span>
+            <span class="pill">VS Code</span>
+          </div>
+          <div class="skill-cat">Backend & DB</div>
+          <div class="skill-pills">
+            <span class="pill">Firebase</span>
+            <span class="pill">SQL</span>
+          </div>
+          <div class="skill-cat">Idiomas</div>
+          <div class="skill-pills">
+            <span class="pill lang">Español Nativo</span>
+            <span class="pill lang">Inglés Intermedio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div>
+          <div class="sec-title">Experiencia</div>
+          <div class="exp-list">
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>BiT — Panel de Datos Públicos</h4>
+                <span class="exp-meta">NoCountry Hackathon · Full Stack</span>
+              </div>
+              <p>App de decisión con IA para gestores públicos. Integré un mapa interactivo 2D/3D con Mapbox, un chat con RAG para consultar datos públicos y generación de reportes PDF. Monorepo con Turborepo, backend Express, pipeline ETL en Python y Supabase.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Talently Lab</h4>
+                <span class="exp-meta">Frontend Developer · React</span>
+              </div>
+              <p>Desarrollo de interfaz de usuario con React y Tailwind CSS en equipo ágil. Implementación de componentes reutilizables, consumo de APIs REST, routing y gestión de estado. Reuniones de coordinación, revisiones de código y entregas en sprints.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>UrbanFix Solutions</h4>
+                <span class="exp-meta">Talently Lab · En curso</span>
+              </div>
+              <p>Plataforma de servicios urbanos con React y Tailwind CSS. Sistema de roles (admin/usuario), CRUD de reportes, geolocalización y diseño responsive. Trabajo colaborativo con metodología ágil.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>ElRincónDelFriki.net</h4>
+                <span class="exp-meta">WordPress · Gestión integral</span>
+              </div>
+              <p>Gestión integral del sitio: edición de contenido, SEO on-page, monetización con Google Ads, analítica y mantenimiento técnico diario.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>Proyectos Autodidactas</h4>
+                <span class="exp-meta">React · JS · APIs</span>
+              </div>
+              <p>Aplicación web con consumo de PokeAPI REST: búsqueda de Pokémon por nombre, visualización de stats, tipos y evoluciones. Diseño responsive con CSS vanilla y paginación.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="sec-title">Formación</div>
+          <div class="edu-list">
+            <div class="edu-item">
+              <span class="edu-tag">Carrera</span>
+              <h5>QA Automation Testing</h5>
+              <p>· Metodologías de testing y automatización</p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Carrera</span>
+              <h5>Diseño de Interfaces Web</h5>
+              <p>· UX/UI, Figma, HTML, CSS, JS</p>
+            </div>
+            <div class="edu-item">
+              <span class="edu-tag">Tecnicatura</span>
+              <h5>Diseño Gráfico Digital</h5>
+              <p>· UX/UI, Figma, HTML, CSS, JS, Bootstrap, PHP, SQL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

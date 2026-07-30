@@ -1,157 +1,133 @@
-/**
- * ERIKA HELFENSTERN - PORTFOLIO LOGIC
- */
-
 const DATA = {
   stack: {
     qa: [
-      { n: "Manual Testing", i: "fa-solid fa-magnifying-glass" },
-      { n: "QA Automation", i: "fa-solid fa-robot" },
-      { n: "uTest Platform", i: "fa-solid fa-vial-circle-check" },
-      { n: "Mobile Testing", i: "fa-solid fa-mobile-screen" },
+      { name: "Manual Testing", icon: "fa-solid fa-magnifying-glass" },
+      { name: "QA Automation", icon: "fa-solid fa-robot" },
+      { name: "uTest Platform", icon: "fa-solid fa-vial-circle-check" },
+      { name: "Mobile Testing", icon: "fa-solid fa-mobile-screen" },
     ],
     front: [
-      { n: "React / JS", i: "fa-brands fa-react" },
-      { n: "HTML / CSS", i: "fa-brands fa-html5" },
-      { n: "Bootstrap", i: "fa-brands fa-bootstrap" },
-      { n: "jQuery", i: "fa-solid fa-code-merge" },
+      { name: "HTML / CSS", icon: "fa-brands fa-html5" },
+      { name: "React / JS", icon: "fa-brands fa-react" },
+      { name: "Tailwind", icon: "fa-solid fa-wand-magic-sparkles" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+      { name: "jQuery", icon: "fa-solid fa-code-merge" },
+      { name: "Firebase", icon: "fa-solid fa-database" },
+      { name: "Git y GitHub", icon: "fa-brands fa-git-alt" },
     ],
     back: [
-      { n: "PHP / SQL", i: "fa-brands fa-php" },
-      { n: "WordPress", i: "fa-brands fa-wordpress" },
-      { n: "GitHub", i: "fa-brands fa-github" },
-      { n: "Localhost", i: "fa-solid fa-house-laptop" },
+      { name: "PHP / SQL", icon: "fa-brands fa-php" },
+      { name: "WordPress", icon: "fa-brands fa-wordpress" },
+      { name: "GitHub", icon: "fa-brands fa-github" },
+      { name: "Localhost", icon: "fa-solid fa-house-laptop" },
+    ],
+    agile: [
+      { name: "Scrum", icon: "fa-solid fa-arrows-rotate" },
+      { name: "Kanban", icon: "fa-solid fa-columns" },
+      { name: "Jira", icon: "fa-brands fa-jira" },
+      { name: "Trello", icon: "fa-brands fa-trello" },
+      { name: "ClickUp", icon: "fa-solid fa-list-check" },
+    ],
+  },
+  education: {
+    qa: [
+      { tag: "Carrera", name: "Carrera QA Automation Testing", desc: "Cursos avanzados en metodologías de testing y automatización." },
+      { tag: "Bootcamp", name: "Testing QA — Talento Tech", desc: "Formación intensiva en testing manual y casos de prueba." },
+      { tag: "Bootcamp", name: "Testing QA Manual — Technology With Purpose Foundation", desc: "Formación en testing QA manual con enfoque en propósito tecnológico." },
+      { tag: "Curso", name: "Automatización con Selenium", desc: "Pruebas automatizadas con Selenium WebDriver." },
+      { tag: "Curso", name: "Pruebas de API con Postman", desc: "Testing REST, colecciones y aserciones dinámicas." },
+      { tag: "Curso", name: "Metodologías Ágiles (Scrum)", desc: "Roles, ceremonias y equipos de desarrollo." },
+      { tag: "Curso", name: "Testing Automation", desc: "Automatización de pruebas con Selenium y Postman." },
+    ],
+    front: [
+      { tag: "Tecnicatura", name: "Diseño Gráfico Digital", desc: "UX/UI, Figma, HTML, CSS, JS, Bootstrap, PHP, SQL." },
+      { tag: "Curso", name: "React.js", desc: "Hooks, estado, routing y consumo de APIs." },
+      { tag: "Curso", name: "JavaScript Intermedio", desc: "POO, closures, promesas, asincronía." },
+      { tag: "Curso", name: "JavaScript Básico", desc: "Fundamentos: variables, funciones, DOM." },
+      { tag: "Curso", name: "PHP y SQL", desc: "Consultas, CRUD y aplicaciones dinámicas." },
+      { tag: "Curso", name: "Desarrollo Front-End", desc: "HTML, CSS, JS, Bootstrap, responsivo." },
     ],
   },
   projects: [
-    {
-      t: "Calculador",
-      d: "Diferentes tipos de conversores",
-      repo: "https://github.com/hevieri/Calculador",
-      demo: "https://hevieri.github.io/Calculador/",
-    },
-    {
-      t: "Gestor de tareas",
-      d: "Visualiza los Json en graficos y tablas",
-      repo: "https://github.com/hevieri/Tasky",
-      demo: "https://hevieri.github.io/Tasky/",
-    },
-  ],
-  experience: [
-    {
-      t: "Proyecto WordPress",
-      d: "Desde chica me interesó el diseño de páginas web: comencé creando sitios en WordPress y llegué a mantener un portal de noticias con actualizaciones diarias, aplicando estrategias de SEO y monetización con publicidad de Google. Con el tiempo avancé hacia el desarrollo con código, explorando HTML, CSS, JavaScript y Bootstrap.",
-      i: "fa-solid fa-laptop-code",
-    },
-    {
-      t: "Adopta un Junior",
-      d: "Ejercí el rol de QA Tester dentro de equipos organizados por áreas, participando en reuniones de coordinación y ciclos de feedback. Colaboré con desarrolladores y diseñadores para asegurar la calidad del software en proyectos que simulaban un entorno laboral real.",
-      i: "fa-solid fa-users",
-    },
-    {
-      t: "uTest",
-      d: "Mi paso por uTest me permitió enfrentar escenarios reales de testing Web y Mobile, adquiriendo disciplina, precisión y capacidad de adaptación en distintos proyectos.",
-      i: "fa-solid fa-bug",
-    },
-    {
-      t: "Proyectos Autodidactas",
-      d: "Suelo llevar adelante proyectos autodidactas para seguir aprendiendo y perfeccionando mis habilidades en QA y front‑end, explorando nuevas herramientas y metodologías.",
-      i: "fa-solid fa-lightbulb",
-    },
+    { title: "PokeAppi", img: "img/pokeappi.png", desc: "App web que consume la PokeAPI REST para buscar y mostrar Pokémon con datos detallados (tipos, stats, evoluciones). Diseño responsive, búsqueda en tiempo real y paginación.", repo: "https://github.com/hevieri/pokeappi", demo: "https://pokeappi.vercel.app/", tech: ["PokeAPI", "JavaScript", "CSS"] },
+    { title: "Koohii Web", img: "img/koohii.png", desc: "Sitio web construido con HTML, CSS y JavaScript. Interfaz limpia, diseño responsive y estructura semántica enfocada en accesibilidad y experiencia de usuario.", repo: "https://github.com/hevieri/kohii", demo: "https://kohii.vercel.app/", tech: ["HTML", "CSS", "JavaScript"] },
+    { title: "SlotMachine", img: "img/slothmachine.png", desc: "Máquina tragamonedas interactiva con lógica de juego en JavaScript, animaciones CSS y estado persistente. Simula tiradas con probabilidad real y efectos visuales.", repo: "https://github.com/hevieri/SlotMachine", demo: "https://slot-machine-nu-ecru.vercel.app/", tech: ["JavaScript", "CSS", "HTML"] },
+    { title: "Calculador", img: "img/calculador.png", desc: "Suite de herramientas de conversión con múltiples calculadoras: temperatura, peso, distancia, moneda y más. Interfaz modular con JS vanilla y actualización en vivo.", repo: "https://github.com/hevieri/Calculador", demo: "https://hevieri.github.io/Calculador/", tech: ["JavaScript", "HTML", "CSS"] },
+    { title: "Tasky", img: "img/tasky.png", desc: "Gestor de tareas con visualización de datos: importa JSON y genera gráficos y tablas dinámicas. CRUD completo con localStorage para persistencia local.", repo: "https://github.com/hevieri/Tasky", demo: "https://hevieri.github.io/Tasky/", tech: ["JavaScript", "JSON", "CSS"] },
+    { title: "Tienda", desc: "E-commerce completo con catálogo de productos, carrito de compras, proceso de checkout y base de datos SQL. Backend en PHP con arquitectura MVC básica.", repo: "https://github.com/hevieri/Tienda", tech: ["PHP", "SQL"] },
+    { title: "Morningstar", img: "img/morningstar.png", desc: "Sitio web estático responsive con HTML5 semántico y CSS3. Enfocado en accesibilidad (WCAG), estructura limpia y tipografía escalable con units relativas.", repo: "https://github.com/hevieri/Morningstar", demo: "https://hevieri.github.io/Morningstar/", tech: ["HTML5", "CSS3"] },
+    { title: "MangaX", img: "img/mangax.png", desc: "App de exploración de manga con consumo de API externa, búsqueda por género, sistema de favoritos y diseño responsive. Componentes modulares en React.", repo: "https://github.com/hevieri/MangaX", tech: ["React", "API", "JavaScript"] },
+    { title: "MugiwaraWeb", desc: "Sitio web temático de One Piece con diseño responsive, estructura semántica y backend en PHP. Contenido dinámico cargado desde base de datos SQL.", repo: "https://github.com/hevieri/MugiwaraWeb", tech: ["PHP", "SQL"] },
   ],
 };
 
+const $ = id => document.getElementById(id);
+
+function render(list, id, fn) {
+  const el = $(id);
+  if (!el) return;
+  el.innerHTML = list.map(fn).join("");
+}
+
+const templates = {
+  stackItem: i => `<div class="stack-item"><i class="${i.icon}"></i>${i.name}</div>`,
+  pill: i => `<span class="pill"><i class="${i.icon}"></i>${i.name}</span>`,
+  edu: i => `<div class="edu__item"><span class="edu__tag">${i.tag}</span><div class="edu__name">${i.name}</div><div class="edu__desc">${i.desc}</div></div>`,
+  project: p => `${p.img ? `<div class="project-card__img"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>` : ""}<h3>${p.title}</h3><p>${p.desc}</p>${p.tech ? `<div class="project-card__tech">${p.tech.map(t => `<span>${t}</span>`).join("")}</div>` : ""}<div class="project-card__links">${p.demo ? `<a href="${p.demo}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> demo</a>` : ""}<a href="${p.repo}" target="_blank"><i class="fa-brands fa-github"></i> código</a></div>`,
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Inyectar Stack
-  const inject = (list, id) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.innerHTML = list
-      .map(
-        (item) => `
-            <div class="stack-item">
-                <i class="${item.i}"></i>
-                <span>${item.n}</span>
-            </div>
-        `,
-      )
-      .join("");
-  };
+  render(DATA.stack.qa, "qa-render", templates.stackItem);
+  render(DATA.stack.front, "front-render", templates.stackItem);
+  render(DATA.stack.back, "back-render", templates.stackItem);
+  render(DATA.stack.agile, "agile-render", templates.pill);
+  render(DATA.education.qa, "edu-qa-render", templates.edu);
+  render(DATA.education.front, "edu-front-render", templates.edu);
 
-  inject(DATA.stack.qa, "qa-render");
-  inject(DATA.stack.front, "front-render");
-  inject(DATA.stack.back, "back-render");
+  DATA.projects.forEach((p, i) => {
+    const el = document.querySelector(`[data-content="${i}"]`);
+    if (el) el.innerHTML = templates.project(p);
+  });
+});
 
-  // Inyectar Proyectos Mini (sin icono de la card, centrando los links)
-  const pContainer = document.getElementById("mini-projects-list");
-  if (pContainer) {
-    pContainer.innerHTML = DATA.projects
-      .map(
-        (p) => `
-            <div class="mini-card">
-                <div>
-                    <h5>${p.t}</h5>
-                    <p>${p.d}</p>
-                    <div class="project-links">
-                        <a href="${p.repo}" target="_blank" class="icon-link">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="${p.demo}" target="_blank" class="icon-link">
-                            <i class="fa-solid fa-globe"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        `,
-      )
-      .join("");
-  }
+function toggleCVDropdown(e) {
+  e.stopPropagation();
+  const m = $("cv-dropdown"), a = $("cv-arrow");
+  const btn = document.querySelector("[aria-controls='cv-dropdown']");
+  m.classList.toggle("open");
+  a.style.transform = m.classList.contains("open") ? "rotate(180deg)" : "rotate(0)";
+  if (btn) btn.setAttribute("aria-expanded", String(m.classList.contains("open")));
+}
 
-  // Inyectar Experiencia
-  const expContainer = document.getElementById("experience-render");
-  if (expContainer) {
-    expContainer.innerHTML = DATA.experience
-      .map(
-        (e) => `
-            <div class="experience-card">
-                <h4><i class="${e.i}"></i> ${e.t}</h4>
-                <p>${e.d}</p>
-            </div>
-        `,
-      )
-      .join("");
+document.addEventListener("click", () => {
+  const m = $("cv-dropdown"), a = $("cv-arrow");
+  if (m?.classList.contains("open")) {
+    m.classList.remove("open");
+    a.style.transform = "rotate(0)";
+    const btn = document.querySelector("[aria-controls='cv-dropdown']");
+    if (btn) btn.setAttribute("aria-expanded", "false");
   }
 });
 
-/**
- * Función global para manejar acordeones
- */
-function toggleAccordion(bodyId, arrowId) {
-  const body = document.getElementById(bodyId);
-  const arrow = document.getElementById(arrowId);
-
-  if (body.classList.contains("open")) {
-    body.classList.remove("open");
-    arrow.classList.remove("rotate");
-  } else {
-    body.classList.add("open");
-    arrow.classList.add("rotate");
-  }
+// Stack collapsible
+function toggleStack(el) {
+  const card = el.closest('.card');
+  card.classList.toggle('card--open');
 }
 
-function toggleAccordion(bodyId, arrowId) {
-  const body = document.getElementById(bodyId);
-  const arrow = document.getElementById(arrowId);
-
-  if (body.classList.contains("open")) {
-    // cerrar
-    body.style.maxHeight = null;
-    body.classList.remove("open");
-    arrow.classList.remove("rotate");
-  } else {
-    // abrir con altura autoajustada
-    body.style.maxHeight = body.scrollHeight + "px";
-    body.classList.add("open");
-    arrow.classList.add("rotate");
-  }
+// Hamburger menu
+const hamburger = document.querySelector(".nav__hamburger");
+const navLinks = document.querySelector(".nav__links");
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", String(!expanded));
+    navLinks.classList.toggle("nav__links--open");
+  });
+  document.addEventListener("click", (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      hamburger.setAttribute("aria-expanded", "false");
+      navLinks.classList.remove("nav__links--open");
+    }
+  });
 }
